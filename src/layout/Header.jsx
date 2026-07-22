@@ -9,9 +9,21 @@ export default function Header() {
       <header className="bg-[#031312] text-white">
         <nav className="flex items-center justify-between h-16 px-6">
           <div className="hidden sm:flex mx-auto gap-10 font-inter">
-            <h1 className="cursor-pointer  hover:text-gray-300 text-lg">Home</h1>
-            <h1 className="cursor-pointer hover:text-gray-300 text-lg">Varieties</h1>
-            <h1 className="cursor-pointer hover:text-gray-300 text-lg">Locations</h1>
+            <a href="/" className="cursor-pointer  hover:text-gray-300 text-lg">
+              Home
+            </a>
+            <a
+              href="/varieties"
+              className="cursor-pointer  hover:text-gray-300 text-lg"
+            >
+              Varieties
+            </a>
+            <a
+              href="/locations"
+              className="cursor-pointer  hover:text-gray-300 text-lg"
+            >
+              Locations
+            </a>
           </div>
           <button
             className="sm:hidden ml-auto"
@@ -28,8 +40,9 @@ export default function Header() {
         />
       )}
       <div
-        className={`fixed top-0 right-0 h-screen w-72 bg-[#031312] text-white z-50 transform transition-transform duration-300 ease-in-out sm:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed top-0 right-0 h-screen w-72 bg-[#031312] text-white z-50 transform transition-transform duration-300 ease-in-out sm:hidden ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <div className="flex justify-between items-center p-5 border-b border-gray-700">
           <h2 className="text-lg font-semibold">Menu</h2>
