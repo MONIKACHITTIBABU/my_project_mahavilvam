@@ -1,8 +1,9 @@
-import VarietiesPlantBg from "../../assets/images/VarietiesPageImages/AboutSectionImages/VarietiesPlantbg.png";
-import VarietiesPlant from "../../assets/images/VarietiesPageImages/AboutSectionImages/VaritiesPlant.png";
-import VectorDesign from "../../assets/images/VarietiesPageImages/AboutSectionImages/VectorDesign.png";
+import VarietiesPlantBg from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VarietiesPlantBg.png";
+import VarietiesPlant from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VaritiesPlant.png";
+import VectorDesign from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VectorDesign.png";
 
 export default function AboutSection() {
+
   const varieties = [
     {
       title: "PANCHAMUKI BELPATRA",
@@ -28,44 +29,43 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="w-full ">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="w-full relative ">
+
+      <img src={VarietiesPlantBg} alt="" className="absolute insert-0 w-full h-full object-cover -z-10" />
+      <div className="container">
         {varieties.map((item, index) => (
           <div
             key={index}
-            className="bg-cover bg-center bg-no-repeat h-[340px] flex items-center px-16"
-            style={{
-              backgroundImage: `url(${VarietiesPlantBg})`,
-            }}
+            className=" py-10 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-12"
           >
             <div
-              className={`flex items-center justify-between w-full ${
-                item.imageLeft ? "flex-row" : "flex-row-reverse"
+              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
+                item.imageLeft ? "" : "lg:flex-row-reverse"
               }`}
             >
-              {/* Plant */}
-              <div className="w-[30%] flex justify-center">
+              {/* Plant Image */}
+              <div className="w-full lg:w-[30%] flex justify-center">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="h-[230px] object-contain"
-                />
+                  className="w-40 sm:w-52 md:w-64 lg:w-auto h-auto lg:h-[230px] object-contain"/>                 
+                
               </div>
 
               {/* Content */}
-              <div className="w-[60%] text-left">
-                <h2 className="text-[#D9A52B] text-6xl font-secondary uppercase">
+              <div className="w-full lg:w-[70%] text-center lg:text-left">
+                <h2
+                  className="text-yellow-primary font-secondary uppercase leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                   {item.title}
                 </h2>
 
                 <img
                   src={VectorDesign}
                   alt="Divider"
-                  className="mx-auto my-4 w-[350px]"
-                />
-
-                <p className="text-[#EDCC65] text-xl font-primary leading-8 max-w-[650px] mx-auto">
-                  {item.description}
+                  className="my-4 w-40 sm:w-56 md:w-72 lg:w-[350px] mx-auto lg:mx-0"/>
+                <p
+                  className="text-yellow-secondary font-primary leading-7 md:leading-8 text-base sm:text-lg md:text-xl max-w-2xl mx-auto  lg:mx-0">
+                    {item.description}
                 </p>
               </div>
             </div>
