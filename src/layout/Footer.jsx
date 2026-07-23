@@ -17,13 +17,13 @@ export default function Footer() {
             {/* Phone Icon */}
             <div className="w-16 h-16 rounded-full bg-[#C89B3C] flex items-center justify-center">
               <Icon
-                icon="mdi:phone-outline"
-                className="text-white text-3xl"
+                icon="gg:phone"
+                className="text-white text-5xl"
               />
             </div>
 
             {/* Heading */}
-            <h2 className="text-[#D8A94A] text-[32px] font-semibold text-center">
+            <h2 className="text-[#D8A94A] text-5xl font-outfi font-semibold text-center">
               BOOK YOUR DIVINE PLANT TODAY!
             </h2>
 
@@ -31,19 +31,19 @@ export default function Footer() {
             <div className="w-16 h-16 rounded-full bg-[#C89B3C] flex items-center justify-center">
               <Icon
                 icon="mdi:sprout"
-                className="text-white text-3xl"
+                className="text-white text-5xl"
               />
             </div>
 
           </div>
 
           {/* Phone Number */}
-          <h1 className="text-center text-white text-[64px] font-bold mt-6">
+          <h1 className="text-center text-white font-primary text-4xl font-bold mt-6">
             918939070940
           </h1>
 
           {/* Website */}
-          <h3 className="text-center text-[#D8A94A] text-[40px] font-semibold mt-4">
+          <h3 className="text-center text-[#D8A94A] font-primary text-4xl font-semibold mt-4">
             www.Mahavilvam@Aimhi.com
           </h3>
 

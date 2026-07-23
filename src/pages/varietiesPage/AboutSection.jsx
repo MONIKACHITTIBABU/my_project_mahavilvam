@@ -33,7 +33,7 @@ export default function AboutSection() {
         {varieties.map((item, index) => (
           <div
             key={index}
-            className="bg-cover bg-center bg-no-repeat h-[340px] flex items-center px-16"
+            className="bg-cover bg-center bg-no-repeat w-full h-[340px] flex items-center px-16"
             style={{
               backgroundImage: `url(${VarietiesPlantBg})`,
             }}

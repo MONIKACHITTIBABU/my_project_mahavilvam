@@ -18,3 +18,50 @@
     --font-bebasneue: "bebasneue"
 
 }
+/* =========================
+   Falling Leaves
+========================= */
+
+.leaf {
+  position: absolute;
+  top: -40px;
+  width: 16px;
+  height: 24px;
+  background: linear-gradient(180deg, #8bc34a, #3f7d20);
+  border-radius: 80% 0;
+  opacity: 0.9;
+  animation: leafFall linear infinite;
+  will-change: transform;
+}
+
+@keyframes leafFall {
+  0% {
+    transform: translate3d(0, -40px, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    transform: translate3d(25px, 120px, 0) rotate(90deg);
+  }
+
+  40% {
+    transform: translate3d(-35px, 260px, 0) rotate(180deg);
+  }
+
+  60% {
+    transform: translate3d(30px, 420px, 0) rotate(270deg);
+  }
+
+  80% {
+    transform: translate3d(-20px, 580px, 0) rotate(360deg);
+  }
+
+  100% {
+    transform: translate3d(35px, 900px, 0) rotate(540deg);
+    opacity: 0;
+  }
+}

@@ -13,9 +13,24 @@ export default function About() {
     >
       {/* Overlay (Optional) */}
       <div className="absolute inset-0 bg-black/10"></div>
+      {/* Falling Leaves */}
+<div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+  {Array.from({ length: 30 }).map((_, index) => (
+    <span
+      key={index}
+      className="leaf"
+      style={{
+        left: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 8}s`,
+        animationDuration: `${5 + Math.random() * 5}s`,
+        transform: `scale(${0.6 + Math.random() * 0.8})`,
+      }}
+    />
+  ))}
+</div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto h-full flex items-center justify-between px-20">
+      <div className="relative z-20 max-w-7xl mx-auto h-full flex items-center justify-between px-20">
 
         {/* Left Plant */}
         <div className="w-1/2 flex justify-between">
