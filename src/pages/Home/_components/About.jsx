@@ -1,7 +1,7 @@
-import AboutBg from "../../../assets/images/AboutImages/AboutBg.png"
-import Plant from "../../../assets/images/AboutImages/Plant.png"
-import SideDesign from "../../../assets/images/AboutImages/SideDesign.png"
-import VectorDesign from "../../../assets/images/AboutImages/VectorDesign.png"
+import AboutBg from "../../../assets/images/HomePageImages/AboutImages/AboutBg.png"
+import Plant from "../../../assets/images/HomePageImages/AboutImages/Plant.png"
+import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDesign.png"
+import VectorDesign from "../../../assets/images/HomePageImages/AboutImages/VectorDesign.png"
 
 export default function About() {
   return (
@@ -22,7 +22,7 @@ export default function About() {
           <img
             src={Plant}
             alt="Mahavilvam Plant"
-            className="w-[320px] h-auto object-contain"
+            className="w-full h-full object-contain"
           />
         </div>
 

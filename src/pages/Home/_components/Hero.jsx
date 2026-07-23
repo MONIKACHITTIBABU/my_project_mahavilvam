@@ -1,5 +1,5 @@
-import HeroBg from "../../../assets/images/HeroImages/HeroBg.png"
-import Design from "../../../assets/images/HeroImages/Design.png"
+import HeroBg from "../../../assets/images/HomePageImages/HeroImages/HeroBg.png"
+import Design from "../../../assets/images/HomePageImages/HeroImages/Design.png"
 
 export default function Hero() {
   return (
