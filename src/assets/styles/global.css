@@ -1,14 +1,19 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
 @theme {
 
     --color-primary: #031312;
     --color-secondary: #8B5E3C;
     --color-background: #FDFBF8;
     --color-text: #1F2937;
+
+    --color-yellow-primary: #E7B64B;
+    --color-yellow-secondary: #D5A53A;
 
 
     --font-primary: "Manrope", sans-serif;
@@ -17,4 +22,8 @@
     --font-inter:  "Inter", sans-serif;
     --font-bebasneue: "bebasneue"
 
+}
+
+.container {
+    @apply container w-full max-w-[2800px] mx-auto px-4 md:px-6 xl:px-8
 }

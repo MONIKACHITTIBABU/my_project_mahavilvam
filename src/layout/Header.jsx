@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-[#031312] text-white">
+      <header className="bg-[#031312] text-white z-50">
         <nav className="flex items-center justify-between h-16 px-6">
           <div className="hidden sm:flex mx-auto gap-10 font-inter">
             <a href="/" className="cursor-pointer  hover:text-gray-300 text-lg">
@@ -19,10 +19,10 @@ export default function Header() {
               Varieties
             </a>
             <a
-              href="/locations"
+              href="/location"
               className="cursor-pointer  hover:text-gray-300 text-lg"
             >
-              Locations
+              locations
             </a>
           </div>
           <button
