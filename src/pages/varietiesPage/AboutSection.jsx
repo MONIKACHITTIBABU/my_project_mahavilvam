@@ -1,7 +1,7 @@
 import VarietiesPlantBg from "../../assets/images/VarietiesPageImages/AboutSectionImages/VarietiesPlantbg.png";
 import VarietiesPlant from "../../assets/images/VarietiesPageImages/AboutSectionImages/VaritiesPlant.png";
 import VectorDesign from "../../assets/images/VarietiesPageImages/AboutSectionImages/VectorDesign.png";
-
+import ScrollReveal from "../../components/ScrollReveal"
 export default function AboutSection() {
   const varieties = [
     {
@@ -28,50 +28,68 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="w-full ">
-      <div className="max-w-[1440px] mx-auto">
-        {varieties.map((item, index) => (
-          <div
-            key={index}
-            className="bg-cover bg-center bg-no-repeat w-full h-[340px] flex items-center px-16"
-            style={{
-              backgroundImage: `url(${VarietiesPlantBg})`,
-            }}
-          >
-            <div
-              className={`flex items-center justify-between w-full ${
-                item.imageLeft ? "flex-row" : "flex-row-reverse"
-              }`}
-            >
-              {/* Plant */}
-              <div className="w-[30%] flex justify-center">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-[230px] object-contain"
-                />
-              </div>
+    <section className="w-full">
+  <div className="max-w-[1440px] mx-auto">
+    {varieties.map((item, index) => (
+      <div
+        key={index}
+        className="bg-cover bg-center bg-no-repeat w-full py-10 px-16"
+        style={{
+          backgroundImage: `url(${VarietiesPlantBg})`,
+        }}
+      >
+        {/* Title */}
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur
+          baseRotation={3}
+          blurStrength={4}
+          containerClassName="flex justify-center"
+          textClassName="text-[#D9A52B] text-4xl lg:text-5xl font-secondary uppercase text-center"
+        >
+          {item.title}
+        </ScrollReveal>
 
-              {/* Content */}
-              <div className="w-[60%] text-left">
-                <h2 className="text-[#D9A52B] text-6xl font-secondary uppercase">
-                  {item.title}
-                </h2>
+        {/* Divider */}
+        <div className="flex justify-center my-4">
+          <img
+            src={VectorDesign}
+            alt="Divider"
+            className="w-[350px]"
+          />
+        </div>
 
-                <img
-                  src={VectorDesign}
-                  alt="Divider"
-                  className="mx-auto my-4 w-[350px]"
-                />
-
-                <p className="text-[#EDCC65] text-xl font-primary leading-8 max-w-[650px] mx-auto">
-                  {item.description}
-                </p>
-              </div>
-            </div>
+        {/* Plant + Description */}
+        <div
+          className={`flex items-center justify-center gap-8 mt-6 ${
+            item.imageLeft ? "flex-row" : "flex-row-reverse"
+          }`}
+        >
+          {/* Plant */}
+          <div className="w-[30%] flex justify-center">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-[230px] object-contain"
+            />
           </div>
-        ))}
+
+          {/* Description */}
+          <div className="w-[60%]">
+            <ScrollReveal
+              baseOpacity={0.1}
+              enableBlur
+              baseRotation={3}
+              blurStrength={4}
+              textClassName="text-[#EDCC65] text-2xl font-primary leading-8"
+            >
+              {item.description}
+            </ScrollReveal>
+          </div>
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
   );
 }
