@@ -14,7 +14,7 @@ export default function About({
 }) {
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24"
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-10 "
       style={{
         backgroundImage: `url(${AboutBg})`,
       }}
@@ -39,22 +39,22 @@ export default function About({
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 gap-10 md:gap-14 lg:gap-10">
+      <div className="container relative z-20  flex flex-col md:flex-row items-center justify-between  gap-10 md:gap-14 lg:gap-10">
 
         {/* Left Plant */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="w-full md:w-[40%] flex justify-center">
           <img
             src={Plant}
             alt="Mahavilvam Plant"
-            className="w-[70%] sm:w-[60%] md:w-[55%] lg:w-[85%] xl:w-full h-auto object-contain"
+            className="w-full lg:w-[80%] h-auto object-cover"
           />
         </div>
 
         {/* Right Content */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end gap-4 sm:gap-6 md:gap-8">
+        <div className="w-full md:w-[60%] flex items-center justify-center lg:justify-end gap-4 sm:gap-6 md:gap-8">
 
           {/* Text */}
-          <div className="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[500px] lg:max-w-[480px] xl:max-w-[540px] text-center lg:text-left">
+          <div className="w-full text-center lg:text-left">
 
             <ScrollReveal
               baseOpacity={baseOpacity}
@@ -74,17 +74,7 @@ export default function About({
             />
           </div>
 
-          {/* Side Decoration */}
-          {/* <img
-            src={SideDesign}
-            alt="Side Design"
-            className="hidden lg:block h-48 xl:h-64 2xl:h-[320px] w-auto"
-          /> */}
-          {/* <img
-            src={SideDesign}
-            alt="Side Design"
-            className="h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[290px] 2xl:h-[330px] w-auto"
-          /> */}
+          
           <img
             src={SideDesign}
             alt="Side Design"
