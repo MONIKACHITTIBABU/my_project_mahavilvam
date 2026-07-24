@@ -13,11 +13,11 @@ const rightBenefits = ["Wealth-Luck Prosperity", "High Oxygen Release"];
 export default function Benefits() {
   return (
     <section
-      className="bg-cover bg-center bg-no-repeat py-24"
+      className="bg-cover bg-center bg-no-repeat py-24 overflow-hidden"
       style={{ backgroundImage: `url(${BenefitsBg})`,}}>
-      <div className="max-w-[1440px] mx-auto px-8">
+      <div className="container">
         {/* Heading */}
-        <h2 className="text-center text-[#D8A94A] text-7xl font-secondary font-semibold mb-20">
+        <h2 className="text-center text-[#D8A94A] text-7xl gradient-text font-secondary uppercase font-semibold mb-20">
           Benefits Of Mahavilvam
         </h2>
         <img src={VectorDesign} alt="Vector Design" className="w-[689px] mt-8 mx-auto" />

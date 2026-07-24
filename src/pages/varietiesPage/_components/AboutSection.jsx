@@ -29,27 +29,26 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="w-full relative ">
+    <section className="w-full relative">
 
-      <img src={VarietiesPlantBg} alt="" className="absolute insert-0 w-full h-full object-cover -z-10" />
+      <img src={VarietiesPlantBg} alt="" className="absolute inset-0 w-full h-full object-cover -z-10" />
       <div className="container">
         {varieties.map((item, index) => (
           <div
             key={index}
-            className=" py-10 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-12"
+            className="py-10 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-12"
           >
             <div
-              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
-                item.imageLeft ? "" : "lg:flex-row-reverse"
-              }`}
+              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${item.imageLeft ? "" : "lg:flex-row-reverse"
+                }`}
             >
               {/* Plant Image */}
               <div className="w-full lg:w-[30%] flex justify-center">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-40 sm:w-52 md:w-64 lg:w-auto h-auto lg:h-[230px] object-contain"/>                 
-                
+                  className="w-40 sm:w-52 md:w-64 lg:w-auto h-auto lg:h-[230px] object-contain"
+                />
               </div>
 
               {/* Content */}
@@ -62,10 +61,11 @@ export default function AboutSection() {
                 <img
                   src={VectorDesign}
                   alt="Divider"
-                  className="my-4 w-40 sm:w-56 md:w-72 lg:w-[350px] mx-auto lg:mx-0"/>
+                  className="my-4 w-40 sm:w-56 md:w-72 lg:w-[350px] mx-auto lg:mx-0"
+                />
                 <p
-                  className="text-yellow-secondary font-primary leading-7 md:leading-8 text-base sm:text-lg md:text-xl max-w-2xl mx-auto  lg:mx-0">
-                    {item.description}
+                  className="text-yellow-secondary font-primary leading-7 md:leading-8 text-base sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0">
+                  {item.description}
                 </p>
               </div>
             </div>

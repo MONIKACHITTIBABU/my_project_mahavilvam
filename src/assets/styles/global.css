@@ -7,23 +7,132 @@
 
 @theme {
 
-    --color-primary: #031312;
-    --color-secondary: #8B5E3C;
-    --color-background: #FDFBF8;
-    --color-text: #1F2937;
+  --color-primary: #031312;
+  --color-secondary: #8B5E3C;
+  --color-background: #FDFBF8;
+  --color-text: #1F2937;
 
-    --color-yellow-primary: #E7B64B;
-    --color-yellow-secondary: #D5A53A;
+  --color-yellow-primary: #E7B64B;
+  --color-yellow-secondary: #D5A53A;
 
 
-    --font-primary: "Manrope", sans-serif;
-    --font-secondary: "Marcellus SC", serif;
-    --font-outfit: "Outfit", sans-serif;
-    --font-inter:  "Inter", sans-serif;
-    --font-bebasneue: "bebasneue"
+  --font-primary: "Manrope", sans-serif;
+  --font-secondary: "Marcellus SC", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-bebasneue: "bebasneue"
 
 }
 
 .container {
-    @apply container w-full max-w-[2800px] mx-auto px-4 md:px-6 xl:px-8
+  @apply container w-full max-w-[2600px] mx-auto px-4 md:px-6 xl:px-8
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(to bottom,
+        #FFDE37 0%,
+        #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  .gradient-leaf {
+    background: linear-gradient(to bottom,
+        #FFBD37 0%,
+        #955C00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  .gold-gradient-text {
+    background: linear-gradient(to right,
+        #E5A334 0%,
+        #EDCC65 50%,
+        #E5A334 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  .gold-gradient-cc {
+    background: linear-gradient(to right,
+        #FFD752 0%,
+        #E2A111 50%,
+        #8D5904 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  .gradient-text2 {
+    background: linear-gradient(to bottom,
+        #FFDE37 0%,
+        #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* =========================
+   Falling Leaves
+========================= */
+
+.leaf {
+  position: absolute;
+  top: -40px;
+  width: 16px;
+  height: 24px;
+  background: linear-gradient(180deg, #8bc34a, #3f7d20);
+  border-radius: 80% 0;
+  opacity: 0.9;
+  animation: leafFall linear infinite;
+  will-change: transform;
+}
+
+@keyframes leafFall {
+  0% {
+    transform: translate3d(0, -40px, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    transform: translate3d(25px, 120px, 0) rotate(90deg);
+  }
+
+  40% {
+    transform: translate3d(-35px, 260px, 0) rotate(180deg);
+  }
+
+  60% {
+    transform: translate3d(30px, 420px, 0) rotate(270deg);
+  }
+
+  80% {
+    transform: translate3d(-20px, 580px, 0) rotate(360deg);
+  }
+
+  100% {
+    transform: translate3d(35px, 900px, 0) rotate(540deg);
+    opacity: 0;
+  }
 }
