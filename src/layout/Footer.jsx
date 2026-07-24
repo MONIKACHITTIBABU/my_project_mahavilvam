@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Phone Number */}
           <h1 className="text-center text-white !font-primary heading">
-            91 8939070940
+            +91 7904105103
           </h1>
 
           {/* Website */}
