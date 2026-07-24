@@ -29,9 +29,7 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(to bottom,
-        #FFDE37 0%,
-        #FFA500 100%);
+    background: linear-gradient(to bottom,#FFDE37 0%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -77,18 +75,23 @@
   }
 }
 
-@layer utilities {
-  .gradient-text2 {
-    background: linear-gradient(to bottom,
-        #FFDE37 0%,
-        #FFA500 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
+
+.heading {
+  @apply font-secondary uppercase text-center leading-tight text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl;
 }
 
+.description
+{
+  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl
+         leading-6 sm:leading-7 md:leading-8 lg:leading-9
+         text-yellow-secondary
+         max-w-2xl mx-auto lg:mx-0;
+}
+
+.subheading
+{
+  @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-5xl font-semibold leading-tight
+}
 /* =========================
    Falling Leaves
 ========================= */

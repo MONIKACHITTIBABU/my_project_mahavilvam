@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
 
             {/* Heading */}
-            <h2 className=" text-[#D8A94A] font-outfit font-semibold text-center leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-2">
+            <h2 className="subheading gradient-text !font-outfit">
               BOOK YOUR DIVINE PLANT TODAY!
             </h2>
 
@@ -39,13 +39,13 @@ export default function Footer() {
           </div>
 
           {/* Phone Number */}
-          <h1 className="text-center text-white font-primary font-bold mt-5 md:mt-6 text-3xl sm:text-2xl md:text-3xl lg:text-6xl break-all">
-            918939070940
+          <h1 className="text-center text-white !font-primary heading">
+            91 8939070940
           </h1>
 
           {/* Website */}
-          <h3 className="text-center text-[#D8A94A] font-primary font-semibold mt-3 md:mt-4 text-MD sm:text-xl md:text-2xl lg:text-4xl break-all">
-            www.Mahavilvam@Aimhi.com
+          <h3 className="text-center gold-gradient-text !font-primary subheading !text-6xl ">
+            Mahavilvam@Aimhi
           </h3>
 
         </div>

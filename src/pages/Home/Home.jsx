@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About
-        description="Aim hi a unit of SGL is one of the leading landscape company in Chennai with 28 years of expertise in various clientele handles executed spiritual park in vellore and Tirupathi "
+        description="AIM HI  a unit of SGL is one of the leading landscape company in chennai with 28 years of expertise servicing diverse clientele having executed large scale spiritual park in Vellore and Tirupati"
         baseOpacity={0.1}
         enableBlur={true}
         baseRotation={3}

@@ -1,9 +1,8 @@
 import VarietiesPlantBg from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VarietiesPlantBg.png";
 import VarietiesPlant from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VaritiesPlant.png";
-import VectorDesign from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VectorDesign.png";
-
+// import VectorDesign from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VectorDesign.png";
+import ReusableSvg from "../../../components/ReusableSvg";
 export default function AboutSection() {
-
   const varieties = [
     {
       title: "PANCHAMUKI BELPATRA",
@@ -30,17 +29,24 @@ export default function AboutSection() {
 
   return (
     <section className="w-full relative">
-
-      <img src={VarietiesPlantBg} alt="" className="absolute inset-0 w-full h-full object-cover -z-10" />
+      <img
+        src={VarietiesPlantBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      />
       <div className="container">
         {varieties.map((item, index) => (
           <div
             key={index}
             className="py-10 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-12"
           >
+            <h2 className="heading gradient-text">{item.title}</h2>
+            <ReusableSvg />
+
             <div
-              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${item.imageLeft ? "" : "lg:flex-row-reverse"
-                }`}
+              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
+                item.imageLeft ? "" : "lg:flex-row-reverse"
+              }`}
             >
               {/* Plant Image */}
               <div className="w-full lg:w-[30%] flex justify-center">
@@ -53,20 +59,12 @@ export default function AboutSection() {
 
               {/* Content */}
               <div className="w-full lg:w-[70%] text-center lg:text-left">
-                <h2
-                  className="text-yellow-primary font-secondary uppercase leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                  {item.title}
-                </h2>
-
-                <img
+                {/* <img
                   src={VectorDesign}
                   alt="Divider"
                   className="my-4 w-40 sm:w-56 md:w-72 lg:w-[350px] mx-auto lg:mx-0"
-                />
-                <p
-                  className="text-yellow-secondary font-primary leading-7 md:leading-8 text-base sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0">
-                  {item.description}
-                </p>
+                /> */}
+                <p className="description">{item.description}</p>
               </div>
             </div>
           </div>
