@@ -26,10 +26,10 @@ export default function Hero() {
           @AIM HI
         </h3>
 
-        <p className="mt-3 font-secondary text-[#E8C875] tracking-[2px] sm:tracking-[4px] md:tracking-[5px] text-xs sm:text-sm md:text-base">
+        <p className="subheading gradient-text mt-6">
           CHENNAI | VELLORE
         </p>
-        <h1 className="font-bebas font-bold text-[#D9A329] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]">
+        <h1 className="font-bebas mt-6 font-bold text-[#D9A329] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]">
           DIVINE CALLING
         </h1>
         {/* Divine Calling Image */}
@@ -39,12 +39,12 @@ export default function Hero() {
           className="mt-4 w-52 sm:w-72 md:w-80 lg:w-[349px] h-auto mx-auto object-contain"/>
 
         <div className="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5">
-          <h3 className="font-primary font-semibold uppercase gold-gradient-text text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl">
+          <h3 className="font-primary font-semibold uppercase gold-gradient-text text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl mt-8">
             OWN YOUR
           </h3>
 
           <div className="flex flex-col items-center justify-center gap-3">
-            <h1 className="font-primary gold-gradient-cc text-[#D9A329] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pl-0 md:pl-4">
+            <h1 className="font-primary font-semibold gold-gradient-cc text-[#D9A329] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pl-0 md:pl-4 mt-6">
               MAHAVILVAM
               <span className="block">PROSPERITY</span>
             </h1>

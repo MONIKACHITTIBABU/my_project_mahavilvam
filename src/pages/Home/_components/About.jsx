@@ -1,8 +1,11 @@
 import AboutBg from "../../../assets/images/HomePageImages/AboutImages/AboutBg.png";
 import Plant from "../../../assets/images/HomePageImages/AboutImages/Plant.png";
 import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDesign.png";
-import VectorDesign from "../../../assets/images/HomePageImages/AboutImages/VectorDesign.png";
+
 import ScrollReveal from "../../../components/ScrollReveal";
+import ReusableSvg from "../../../components/ReusableSvg";
+
+
 
 export default function About({
   description,
@@ -10,20 +13,19 @@ export default function About({
   enableBlur,
   baseRotation,
   blurStrength,
-  textClassName,
 }) {
   return (
     <section
       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-10 "
-      style={{
-        backgroundImage: `url(${AboutBg})`,
-      }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/10"></div>
+      <img
+        src={AboutBg}
+        alt="Background"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
       {/* Falling Leaves */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
         {Array.from({ length: 30 }).map((_, index) => (
           <span
             key={index}
@@ -39,7 +41,7 @@ export default function About({
       </div>
 
       {/* Content */}
-      <div className="container relative z-20  flex flex-col md:flex-row items-center justify-between  gap-10 md:gap-14 lg:gap-10">
+      <div className="container relative z-20  flex flex-col md:flex-row items-center justify-between  gap-8">
 
         {/* Left Plant */}
         <div className="w-full md:w-[40%] flex justify-center">
@@ -61,20 +63,25 @@ export default function About({
               enableBlur={enableBlur}
               baseRotation={baseRotation}
               blurStrength={blurStrength}
-              textClassName={textClassName}
+              textClassName="!gradient-text font-primary description leading-relaxed"
             >
               {description}
             </ScrollReveal>
 
-            {/* Bottom Ornament */}
-            <img
+              <ReusableSvg />
+
+          </div>
+
+          {/* Side Design */}
+          <div className="hidden md:flex flex-shrink-0 items-center justify-center">
+            {/* <img
               src={VectorDesign}
               alt="Vector Design"
               className="w-[80%] sm:w-[75%] md:w-[70%] lg:w-full max-w-[689px] mt-6 md:mt-8 mx-auto lg:mx-0"
-            />
+            /> */}
           </div>
 
-          
+
           <img
             src={SideDesign}
             alt="Side Design"

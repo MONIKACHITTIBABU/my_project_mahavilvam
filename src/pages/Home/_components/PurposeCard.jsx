@@ -16,7 +16,7 @@ export default function PurposeCard({ title, items, type, className }) {
         {items.map((item, index) => (
           <p
             key={index}
-            className="text-white text-2xl font-primary font-medium leading-10 text-center"
+            className="description !text-white my-3 "
           >
             {item}
           </p>

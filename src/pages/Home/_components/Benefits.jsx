@@ -1,6 +1,8 @@
 import Pot from "../../../assets/images/HomePageImages/BenefitsImage/Pot.png";
 import BenefitsBg from "../../../assets/images/HomePageImages/BenefitsImage/BenefitsBg.png";
 import VectorDesign from "../../../assets/images/HomePageImages/BenefitsImage/VectorDesign.png";
+import ReusableSvg from "../../../components/ReusableSvg";
+import Box from "../../../assets/images/HomePageImages/BenefitsImage/Box.png";
 
 const leftBenefits = [
   "Divine Connection",
@@ -14,35 +16,53 @@ export default function Benefits() {
   return (
     <section
       className="bg-cover bg-center bg-no-repeat py-24 overflow-hidden"
-      style={{ backgroundImage: `url(${BenefitsBg})`,}}>
+      style={{ backgroundImage: `url(${BenefitsBg})` }}
+    >
       <div className="container">
         {/* Heading */}
-        <h2 className="text-center text-[#D8A94A] text-7xl gradient-text font-secondary uppercase font-semibold mb-20">
-          Benefits Of Mahavilvam
-        </h2>
-        <img src={VectorDesign} alt="Vector Design" className="w-[689px] mt-8 mx-auto" />
+        <h2 className="heading gradient-text">Benefits Of Mahavilvam</h2>
+        <ReusableSvg />
 
         {/* Content */}
         <div className="grid grid-cols-3 items-center">
           {/* Left Benefits */}
-          <div className="flex flex-col items-end font-primary text-3xl gap-20">
+          <div className="flex flex-col items-end gap-20 font-primary text-3xl">
             {leftBenefits.map((benefit) => (
-              <div key={benefit} className=" w-full py-3 rounded-full text-center text-white font-medium border border-[#F3D58C] shadow-lg bg-gradient-to-r from-[#B56A10] via-[#E5B85A] to-[#B56A10]" >
-                {benefit}
+              <div key={benefit} className="relative w-[430px] h-[90px]">
+                <img
+                  src={Box}
+                  alt=""
+                  className="w-full h-full object-contain"
+                />
+
+                <div className="absolute inset-0 flex items-center justify-center text-white font-medium">
+                  {benefit}
+                </div>
               </div>
             ))}
           </div>
-
           {/* Plant */}
           <div className="flex justify-center w-full mx-auto">
-            <img src={Pot} alt="Mahavilvam Plant" className="w-full h-full object-contain" />
+            <img
+              src={Pot}
+              alt="Mahavilvam Plant"
+              className="w-full h-full object-contain"
+            />
           </div>
 
           {/* Right Benefits */}
-          <div className="flex flex-col items-start font-primary text-3xl gap-20">
+          <div className="flex flex-col items-start gap-20 font-primary text-3xl">
             {rightBenefits.map((benefit) => (
-              <div key={benefit} className="w-full py-3 rounded-full text-center text-white font-medium border border-[#F3D58C] shadow-lg bg-gradient-to-r from-[#B56A10] via-[#E5B85A] to-[#B56A10] " >
-                {benefit}
+              <div key={benefit} className="relative w-[430px] h-[90px]">
+                <img
+                  src={Box}
+                  alt=""
+                  className="w-full h-full object-contain rotate-180"
+                />
+
+                <div className="absolute inset-0 flex items-center justify-center text-white font-medium">
+                  {benefit}
+                </div>
               </div>
             ))}
           </div>
