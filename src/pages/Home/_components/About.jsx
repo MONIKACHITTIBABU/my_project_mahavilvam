@@ -5,6 +5,8 @@ import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDe
 import ScrollReveal from "../../../components/ScrollReveal";
 import ReusableSvg from "../../../components/ReusableSvg";
 
+
+
 export default function About({
   description,
   baseOpacity,
@@ -13,16 +15,14 @@ export default function About({
   blurStrength,
 }) {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden py-10 md:py-16 xl:py-20">
-      {/* Background */}
+    <section
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-10 "
+    >
       <img
         src={AboutBg}
         alt="Background"
         className="absolute inset-0 h-full w-full object-cover"
       />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/10" />
 
       {/* Falling Leaves */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
@@ -40,47 +40,53 @@ export default function About({
         ))}
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-20 mx-auto flex max-w-[1800px] flex-col items-center justify-between px-6 sm:px-8 md:px-12 lg:flex-row lg:px-14 xl:px-20 2xl:px-28">
+      {/* Content */}
+      <div className="container relative z-20  flex flex-col md:flex-row items-center justify-between  gap-8">
 
-        {/* Plant */}
-        <div className="flex w-full justify-center lg:w-[45%] lg:justify-start">
+        {/* Left Plant */}
+        <div className="w-full md:w-[40%] flex justify-center">
           <img
             src={Plant}
             alt="Mahavilvam Plant"
-            className="h-auto w-full max-w-[340px] object-contain sm:max-w-[420px] md:max-w-[500px] lg:max-w-[560px] xl:max-w-[650px] 2xl:max-w-[760px]"
+            className="w-full lg:w-[80%] h-auto object-cover"
           />
         </div>
 
-        {/* Right Section */}
-        <div className="mt-10 flex w-full items-center justify-between gap-6 lg:mt-0 lg:w-[55%] xl:gap-10">
+        {/* Right Content */}
+        <div className="w-full md:w-[60%] flex items-center justify-center lg:justify-end gap-4 sm:gap-6 md:gap-8">
 
-          {/* Description */}
-          <div className="flex-1 w-full max-w-[700px]">
+          {/* Text */}
+          <div className="w-full text-center lg:text-left">
+
             <ScrollReveal
               baseOpacity={baseOpacity}
               enableBlur={enableBlur}
               baseRotation={baseRotation}
               blurStrength={blurStrength}
-              textClassName="gradient-text font-primary description leading-relaxed"
+              textClassName="!gradient-text font-primary description leading-relaxed"
             >
               {description}
             </ScrollReveal>
 
-            <div className="mt-8">
               <ReusableSvg />
-            </div>
+
           </div>
 
           {/* Side Design */}
           <div className="hidden md:flex flex-shrink-0 items-center justify-center">
-            <img
-              src={SideDesign}
-              alt="Side Design"
-              className="h-56 w-auto object-contain lg:h-72 xl:h-80 2xl:h-96"
-            />
+            {/* <img
+              src={VectorDesign}
+              alt="Vector Design"
+              className="w-[80%] sm:w-[75%] md:w-[70%] lg:w-full max-w-[689px] mt-6 md:mt-8 mx-auto lg:mx-0"
+            /> */}
           </div>
 
+
+          <img
+            src={SideDesign}
+            alt="Side Design"
+            className="h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[290px] 2xl:h-[330px] w-auto -translate-y-2 sm:-translate-y-4 md:-translate-y-6 lg:-translate-y-8"
+          />
         </div>
       </div>
     </section>
