@@ -1,94 +1,94 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
 @theme {
 
-    --color-primary: #031312;
-    --color-secondary: #8B5E3C;
-    --color-background: #FDFBF8;
-    --color-text: #1F2937;
+  --color-primary: #031312;
+  --color-secondary: #8B5E3C;
+  --color-background: #FDFBF8;
+  --color-text: #1F2937;
+
+  --color-yellow-primary: #E7B64B;
+  --color-yellow-secondary: #D5A53A;
 
 
-    --font-primary: "Manrope", sans-serif;
-    --font-secondary: "Marcellus SC", serif;
-    --font-outfit: "Outfit", sans-serif;
-    --font-bebasneue: "bebasneue"
+  --font-primary: "Manrope", sans-serif;
+  --font-secondary: "Marcellus SC", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-bebasneue: "bebasneue"
 
 }
 
 .container {
-    @apply container w-full max-w-[2600px] mx-auto px-4 md:px-6 xl:px-8
+  @apply container w-full max-w-[2600px] mx-auto px-4 md:px-6 xl:px-8
 }
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(
-      to bottom,
-      #FFDE37 0%,
-      #FFA500 100%
-    );
+    background: linear-gradient(to bottom,
+        #FFDE37 0%,
+        #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
   }
 }
+
 @layer utilities {
   .gradient-leaf {
-    background: linear-gradient(
-      to bottom,
-      #FFBD37 0%,
-      #955C00 100%
-    );
+    background: linear-gradient(to bottom,
+        #FFBD37 0%,
+        #955C00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
   }
 }
+
 @layer utilities {
   .gold-gradient-text {
-    background: linear-gradient(
-      to right,
-      #E5A334 0%,
-      #EDCC65 50%,
-      #E5A334 100%
-    );
+    background: linear-gradient(to right,
+        #E5A334 0%,
+        #EDCC65 50%,
+        #E5A334 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
   }
 }
+
 @layer utilities {
   .gold-gradient-cc {
-    background: linear-gradient(
-      to right,
-      #FFD752 0%,
-      #E2A111 50%,
-      #8D5904 100%
-    );
+    background: linear-gradient(to right,
+        #FFD752 0%,
+        #E2A111 50%,
+        #8D5904 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
   }
 }
+
 @layer utilities {
   .gradient-text2 {
-    background: linear-gradient(
-      to bottom,
-      #FFDE37 0%,
-      #FFA500 100%
-    );
+    background: linear-gradient(to bottom,
+        #FFDE37 0%,
+        #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
   }
 }
+
 /* =========================
    Falling Leaves
 ========================= */

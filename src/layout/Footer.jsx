@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
-import FooterBg from "../assets/images/Footer/FooterBg.png"
+import FooterBg from "../assets/images/Footer/FooterBg.png";
+
 export default function Footer() {
   return (
     <section
