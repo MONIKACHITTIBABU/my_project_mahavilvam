@@ -31,6 +31,7 @@ export default function LocationAbout() {
       <div className="container z-10">
         {locations.map((location, index) => (
           <div key={index} className="my-10">
+            
             {/* Heading */}
             <div className="flex flex-col items-center text-center">
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[72px] font-secondary uppercase text-yellow-primary">

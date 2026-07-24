@@ -3,6 +3,7 @@ import Plant from "../../../assets/images/HomePageImages/AboutImages/Plant.png";
 import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDesign.png";
 import VectorDesign from "../../../assets/images/HomePageImages/AboutImages/VectorDesign.png";
 import ScrollReveal from "../../../components/ScrollReveal";
+
 export default function About({
   description,
   baseOpacity,
@@ -11,23 +12,16 @@ export default function About({
   blurStrength,
   textClassName,
 }) {
-  console.log({
-  description,
-  baseOpacity,
-  enableBlur,
-  baseRotation,
-  blurStrength,
-  textClassName,
-});
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-10 md:py-16"
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24"
       style={{
         backgroundImage: `url(${AboutBg})`,
       }}
     >
-      {/* Overlay (Optional) */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/10"></div>
+
       {/* Falling Leaves */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
         {Array.from({ length: 30 }).map((_, index) => (
@@ -45,20 +39,23 @@ export default function About({
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto h-full flex flex-col lg:flex-row items-center justify-between px-5 sm:px-8 md:px-12 lg:px-20 gap-10 lg:gap-0">
+      <div className="relative z-20 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 gap-10 md:gap-14 lg:gap-10">
+
         {/* Left Plant */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
             src={Plant}
             alt="Mahavilvam Plant"
-            className="w-full h-full object-contain"
+            className="w-[70%] sm:w-[60%] md:w-[55%] lg:w-[85%] xl:w-full h-auto object-contain"
           />
         </div>
 
         {/* Right Content */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center gap-4 md:gap-8">
+        <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end gap-4 sm:gap-6 md:gap-8">
+
           {/* Text */}
-          <div className="max-w-[480px] w-full text-center lg:text-left">
+          <div className="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[500px] lg:max-w-[480px] xl:max-w-[540px] text-center lg:text-left">
+
             <ScrollReveal
               baseOpacity={baseOpacity}
               enableBlur={enableBlur}
@@ -73,15 +70,25 @@ export default function About({
             <img
               src={VectorDesign}
               alt="Vector Design"
-              className="w-full max-w-[689px] mt-6 md:mt-8 mx-auto lg:mx-0"
+              className="w-[80%] sm:w-[75%] md:w-[70%] lg:w-full max-w-[689px] mt-6 md:mt-8 mx-auto lg:mx-0"
             />
           </div>
 
           {/* Side Decoration */}
+          {/* <img
+            src={SideDesign}
+            alt="Side Design"
+            className="hidden lg:block h-48 xl:h-64 2xl:h-[320px] w-auto"
+          /> */}
+          {/* <img
+            src={SideDesign}
+            alt="Side Design"
+            className="h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[290px] 2xl:h-[330px] w-auto"
+          /> */}
           <img
             src={SideDesign}
             alt="Side Design"
-            className="hidden md:block h-40 lg:h-64 xl:h-[320px] w-auto"
+            className="h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px] xl:h-[290px] 2xl:h-[330px] w-auto -translate-y-2 sm:-translate-y-4 md:-translate-y-6 lg:-translate-y-8"
           />
         </div>
       </div>

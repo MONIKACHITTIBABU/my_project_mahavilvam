@@ -1,4 +1,5 @@
 import LocationnBg from "../assets/images/LocationImages/LocationHeroImages/LocationnBg.png";
+import MobileBg from "../assets/images/LocationImages/LocationHeroImages/MobileBg.png";
 
 export default function ReusableHeroSection({
     title1,
@@ -6,26 +7,35 @@ export default function ReusableHeroSection({
 }) {
     return (
         <section
-            className="relative w-full h-[70vh] sm:h-[80vh] md:h-screen lg:h-screen xl:h-screen flex items-center justify-center"
+            className="relative w-full h-[70vh] sm:h-[80vh] md:h-screen lg:h-screen xl:h-screen flex items-center justify-center overflow-hidden"
         >
-            <img
-                src={LocationnBg}
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover z-0"
-            />
+            {/* Desktop */}
+            <img src={LocationnBg} alt="" className="hidden lg:block absolute inset-0 w-full h-full object-cover object-top z-0" />
 
-            <div className="absolute left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-16 md:-bottom-20 lg:-bottom-24 xl:-bottom-24 2xl:-bottom-24 z-10 opacity-15 w-full h-full text-center">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[170px] 2xl:text-[170px] text-yellow-primary font-primary font-bold uppercase leading-none">
-                    {title1} <br />{title2}
+            {/* Mobile */}
+            <img src={MobileBg} alt="" className="block lg:hidden absolute inset-0 w-full h-full object-cover object-top z-0" />
+
+
+            {/* Background Opacity Text */}
+           
+            <div className="absolute left-1/2 top-[60%] lg:top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none w-full flex justify-center">
+                <h1 className="w-[90%] lg:w-full text-center text-yellow-primary font-primary font-bold uppercase opacity-15 leading-none text-[60px] sm:text-[80px] md:text-[100px] lg:text-[170px] xl:text-[190px]">
+                    {title1}
+                    <br />
+                    {title2}
                 </h1>
             </div>
 
-            {/* Title */}
-            <div className="relative z-20 font-primary bottom-3 sm:bottom-5 md:bottom-7 lg:bottom-7 xl:bottom-7 text-center justify-center">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[110px] 2xl:text-[170px] text-yellow-primary font-primary font-bold uppercase leading-none">
-                    {title1} <br />{title2}
+            {/* Main Title */}
+            <div className="absolute left-1/2 top-[60%] lg:top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-center">
+                <h1 className="text-yellow-primary font-primary font-bold uppercase leading-none text-[28px] sm:text-[42px] md:text-[55px] lg:text-[90px] xl:text-[110px]">
+                    {title1} <br /> {title2}
                 </h1>
             </div>
+
+
         </section>
     );
 }
+
+
