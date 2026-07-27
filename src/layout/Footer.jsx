@@ -1,15 +1,22 @@
 import { Icon } from "@iconify/react";
 import FooterBg from "../assets/images/Footer/FooterBg.png";
+import FallingLeaves from "../components/FallingLeaves"; // Import component
 
 export default function Footer() {
   return (
     <section
-      className="w-full py-6 md:py-10"
+      className="relative w-full py-6 md:py-10 overflow-hidden"
       style={{
         backgroundImage: `url(${FooterBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <div className="container">
+      {/* Falling Leaves Layer (Appears above FooterBg, behind the inner card/text) */}
+      <FallingLeaves count={12} />
+
+      {/* Content Container (z-20 brings card & text above falling leaves) */}
+      <div className="container relative z-20">
         <div className="bg-[#021A17] border-2 border-[#C89B3C] rounded-2xl lg:rounded-[24px] px-5 sm:px-6 md:px-8 lg:px-10 py-6 md:py-8">
 
           {/* Top Row */}
@@ -40,11 +47,11 @@ export default function Footer() {
 
           {/* Phone Number */}
           <h1 className="text-center text-white !font-primary heading">
-            91 8939070940
+            +91 7904105103
           </h1>
 
           {/* Website */}
-          <h3 className="text-center gold-gradient-text !font-primary subheading !text-6xl ">
+          <h3 className="text-center gold-gradient-text !font-primary subheading !text-6xl">
             Mahavilvam@Aimhi
           </h3>
 

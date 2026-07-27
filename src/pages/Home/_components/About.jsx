@@ -1,11 +1,10 @@
-import AboutBg from "../../../assets/images/HomePageImages/AboutImages/AboutBg.png";
+import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import Plant from "../../../assets/images/HomePageImages/AboutImages/Plant.png";
 import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDesign.png";
 
 import ScrollReveal from "../../../components/ScrollReveal";
 import ReusableSvg from "../../../components/ReusableSvg";
-
-
+import FallingLeaves from "../../../components/FallingLeaves";
 
 export default function About({
   description,
@@ -16,32 +15,20 @@ export default function About({
 }) {
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-10 "
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-10"
     >
+      {/* Background */}
       <img
-        src={AboutBg}
+        src={CommonBg}
         alt="Background"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover -z-10"
       />
 
-      {/* Falling Leaves */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
-        {Array.from({ length: 30 }).map((_, index) => (
-          <span
-            key={index}
-            className="leaf"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 8}s`,
-              animationDuration: `${5 + Math.random() * 5}s`,
-              transform: `scale(${0.6 + Math.random() * 0.8})`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Falling Leaves Layer */}
+      <FallingLeaves count={12} />
 
       {/* Content */}
-      <div className="container relative z-20  flex flex-col md:flex-row items-center justify-between  gap-8">
+      <div className="container relative z-20 flex flex-col md:flex-row items-center justify-between gap-8">
 
         {/* Left Plant */}
         <div className="w-full md:w-[40%] flex justify-center">
@@ -56,31 +43,24 @@ export default function About({
         <div className="w-full md:w-[60%] flex items-center justify-center lg:justify-end gap-4 sm:gap-6 md:gap-8">
 
           {/* Text */}
-          <div className="w-full text-center lg:text-left">
-
+          <div className="w-full text-center description lg:text-left">
             <ScrollReveal
               baseOpacity={baseOpacity}
               enableBlur={enableBlur}
               baseRotation={baseRotation}
               blurStrength={blurStrength}
-              textClassName="!gradient-text font-primary description leading-relaxed"
+              textClassName="!gradient-text font-primary leading-relaxed xl:text-3xl"
             >
               {description}
             </ScrollReveal>
 
-              <ReusableSvg />
-
+            <ReusableSvg />
           </div>
 
           {/* Side Design */}
           <div className="hidden md:flex flex-shrink-0 items-center justify-center">
-            {/* <img
-              src={VectorDesign}
-              alt="Vector Design"
-              className="w-[80%] sm:w-[75%] md:w-[70%] lg:w-full max-w-[689px] mt-6 md:mt-8 mx-auto lg:mx-0"
-            /> */}
+            {/* Vector design if needed */}
           </div>
-
 
           <img
             src={SideDesign}
