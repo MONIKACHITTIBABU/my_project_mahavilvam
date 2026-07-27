@@ -7,6 +7,7 @@ import Location from "./_components/Location";
 import Purpose from "./_components/Purpose";
 import Footer from "../../layout/Footer";
 
+
 export default function Home() {
   return (
     <div>

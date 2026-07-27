@@ -1,7 +1,10 @@
 import VarietiesPlantBg from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VarietiesPlantBg.png";
+import VarietiesPlantBg2 from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VarietiesPlantBg2.png";
 import VarietiesPlant from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VaritiesPlant.png";
-// import VectorDesign from "../../../assets/images/VarietiesPageImages/AboutSectionImages/VectorDesign.png";
 import ReusableSvg from "../../../components/ReusableSvg";
+import ScrollReveal from "../../../components/ScrollReveal";
+import FallingLeaves from "../../../components/FallingLeaves";
+
 export default function AboutSection() {
   const varieties = [
     {
@@ -28,48 +31,68 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="w-full relative">
-      <img
-        src={VarietiesPlantBg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-      />
-      <div className="container">
-        {varieties.map((item, index) => (
-          <div
-            key={index}
-            className="py-10 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-12"
-          >
-            <h2 className="heading gradient-text">{item.title}</h2>
-            <ReusableSvg />
+    <section className="w-full">
+      {varieties.map((item, index) => (
+        <div
+          key={index}
+          className="relative w-full min-h-[750px] overflow-hidden"
+        >
+          {/* Falling Leaves */}
+          <FallingLeaves count={12} />
 
+          {/* Background */}
+          <img
+            src={index === 1 ? VarietiesPlantBg2 : VarietiesPlantBg}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover -z-10"
+          />
+
+          {/* Content */}
+          <div className="container h-full py-12 sm:py-16 md:py-20 flex flex-col justify-center relative z-20">
+            {/* Heading */}
+            <div className="text-center mt-4 md:mt-6 mb-10 md:mb-14">
+              <h2 className="gradient-text font-secondary text-[30px] sm:text-[36px] md:text-[50px] lg:text-[72px]">
+                {item.title}
+              </h2>
+
+              <div className="flex justify-center mt-4">
+                <ReusableSvg />
+              </div>
+            </div>
+
+            {/* Content */}
             <div
-              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
-                item.imageLeft ? "" : "lg:flex-row-reverse"
+              className={`flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-16 ${
+                item.imageLeft ? "" : "md:flex-row-reverse"
               }`}
             >
               {/* Plant Image */}
-              <div className="w-full lg:w-[30%] flex justify-center">
+              <div className="w-full md:w-[40%] lg:w-[38%] flex justify-center">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-40 sm:w-52 md:w-64 lg:w-auto h-auto lg:h-[230px] object-contain"
+                  className={`w-[220px] sm:w-[280px] md:w-[300px] lg:w-[430px] xl:w-[470px] object-contain ${
+                    index === 1
+                      ? "translate-y-8 md:translate-y-12 lg:translate-y-20"
+                      : "translate-y-6 md:translate-y-10 lg:translate-y-16"
+                  }`}
                 />
               </div>
 
-              {/* Content */}
-              <div className="w-full lg:w-[70%] text-center lg:text-left">
-                {/* <img
-                  src={VectorDesign}
-                  alt="Divider"
-                  className="my-4 w-40 sm:w-56 md:w-72 lg:w-[350px] mx-auto lg:mx-0"
-                /> */}
-                <p className="description">{item.description}</p>
+              {/* Description */}
+              <div
+                className={`w-full md:w-[60%] lg:w-[62%] text-center ${
+                  item.imageLeft ? "md:text-left" : "md:text-right"
+                }`}
+              >
+                <ScrollReveal textClassName="font-primary text-[#D9A329] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] leading-[1.8]">
+                  {item.description}
+                </ScrollReveal>
               </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </section>
   );
 }

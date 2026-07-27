@@ -12,12 +12,12 @@ export default function Hero() {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/30 "></div>
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-5 sm:px-8 md:px-12 lg:px-16 text-center">
         <h2
-          className="font-primary font-bold gradient-leaf text-[#D9A329] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]"
+          className="font-primary font-bold gradient-leaf text-[#D9A329] text-4xl mt-15 sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]"
         >
           Mahavilvam
         </h2>

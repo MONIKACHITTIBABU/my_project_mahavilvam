@@ -1,7 +1,8 @@
-import PurposeBg from "../../../assets/images/HomePageImages/PurposeImages/PurposeBg.png";
+import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import VectorDesign from "../../../assets/images/HomePageImages/PurposeImages/VectorDesign.png";
 import ReusableSvg from "../../../components/ReusableSvg";
 import PurposeCard from "./PurposeCard";
+import FallingLeaves from "../../../components/FallingLeaves";
 
 export default function Purpose() {
   const purposeCards = [
@@ -26,13 +27,17 @@ export default function Purpose() {
 
   return (
     <section className="relative py-10 overflow-hidden">
+      {/* Background Image */}
       <img
-        src={PurposeBg}
+        src={CommonBg}
         alt=""
         className="absolute inset-0 -z-10 w-full h-full object-cover"
       />
 
-      <div className="container z-10">
+      {/* Falling Leaves Layer */}
+      <FallingLeaves count={12} />
+
+      <div className="container relative z-10">
         {/* Heading */}
         <h1 className="heading gradient-text">THE PURPOSE</h1>
         <ReusableSvg />
