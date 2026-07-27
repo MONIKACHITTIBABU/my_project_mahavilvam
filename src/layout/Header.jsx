@@ -7,14 +7,14 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-[#031312]/2 backdrop-blur-sm text-white">
+      <header className="fixed top-0 left-0 w-full z-50 bg-[#031312]/20 backdrop-blur-md text-white">
         <nav className="flex items-center justify-between px-6 py-6">
           <div className="hidden sm:flex mx-auto gap-10 font-primary">
             <NavLink
               to="/"
               end
               className={({ isActive }) =>
-                `cursor-pointer text-2xl ${
+                `cursor-pointer text-lg md:text-xl ${
                   isActive
                     ? "text-[#FFA500]"
                     : "text-white hover:gradient-text2"
@@ -27,7 +27,7 @@ export default function Header() {
             <NavLink
               to="/varieties"
               className={({ isActive }) =>
-                `cursor-pointer text-2xl ${
+                `cursor-pointer text-lg md:text-xl ${
                   isActive
                     ? "text-[#FFA500]"
                     : "text-white hover:gradient-text2"
@@ -40,7 +40,7 @@ export default function Header() {
             <NavLink
               to="/locations"
               className={({ isActive }) =>
-                `cursor-pointer text-2xl ${
+                `cursor-pointer text-lg md:text-xl ${
                   isActive
                     ? "text-[#FFA500]"
                     : "text-white hover:gradient-text2"

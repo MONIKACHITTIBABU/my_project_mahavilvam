@@ -87,55 +87,76 @@
          text-yellow-secondary
          max-w-2xl mx-auto lg:mx-0;
 }
+/* Word-by-word reveal sharp rendering fix */
+.description .word {
+  display: inline-block;
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  will-change: opacity;
+}
 
 .subheading
 {
   @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-5xl font-semibold leading-tight
 }
-/* =========================
-   Falling Leaves
-========================= */
 
-.leaf {
-  position: absolute;
-  top: -40px;
-  width: 16px;
-  height: 24px;
-  background: linear-gradient(180deg, #8bc34a, #3f7d20);
-  border-radius: 80% 0;
-  opacity: 0.9;
-  animation: leafFall linear infinite;
-  will-change: transform;
-}
-
-@keyframes leafFall {
-  0% {
-    transform: translate3d(0, -40px, 0) rotate(0deg);
-    opacity: 0;
+@keyframes spinClockwise {
+  from {
+    transform: rotate(0deg);
   }
 
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-clockwise {
+  animation: spinClockwise 8s linear infinite;
+}
+
+/* Container for leaf animations - isolates leaves strictly inside their section */
+.falling-leaves-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevents leaves from blocking clicks */
+  overflow: hidden;    /* Leaf animation ends right at section boundary */
+  z-index: 1;
+}
+
+/* Base Leaf Style */
+.falling-leaf {
+  position: absolute;
+  top: -60px; /* Start slightly above the section */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  will-change: transform, opacity;
+  animation: fallAndSway linear infinite;
+}
+
+/* Falling + Swaying Keyframes */
+@keyframes fallAndSway {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
   10% {
     opacity: 1;
   }
-
-  20% {
-    transform: translate3d(25px, 120px, 0) rotate(90deg);
+  50% {
+    transform: translateY(50vh) translateX(30px) rotate(180deg);
   }
-
-  40% {
-    transform: translate3d(-35px, 260px, 0) rotate(180deg);
+  90% {
+    opacity: 1;
   }
-
-  60% {
-    transform: translate3d(30px, 420px, 0) rotate(270deg);
-  }
-
-  80% {
-    transform: translate3d(-20px, 580px, 0) rotate(360deg);
-  }
-
   100% {
-    transform: translate3d(35px, 900px, 0) rotate(540deg);
-    opacity: 0;
+    transform: translateY(105vh) translateX(-20px) rotate(360deg);
+    opacity: 0; /* Fade out as it leaves the bottom of the section */
   }
 }
