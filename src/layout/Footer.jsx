@@ -1,12 +1,15 @@
 import { Icon } from "@iconify/react";
 import FooterBg from "../assets/images/Footer/FooterBg.png";
+import FallingLeaves from "../components/FallingLeaves"; // Import component
 
 export default function Footer() {
   return (
     <section
-      className="w-full py-6 md:py-10"
+      className="relative w-full py-6 md:py-10 overflow-hidden"
       style={{
         backgroundImage: `url(${FooterBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="container">
