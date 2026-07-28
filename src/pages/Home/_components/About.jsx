@@ -12,13 +12,13 @@ export default function About({
   textClassName,
 }) {
   console.log({
-  description,
-  baseOpacity,
-  enableBlur,
-  baseRotation,
-  blurStrength,
-  textClassName,
-});
+    description,
+    baseOpacity,
+    enableBlur,
+    baseRotation,
+    blurStrength,
+    textClassName,
+  });
   return (
     <section
       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden py-10 md:py-16"
