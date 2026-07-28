@@ -97,21 +97,10 @@ export default function Footer() {
                   />
                 </div>
 
-              </div>
-
-              {/* Phone Number */}
-              <h1 className="text-center text-white !font-primary heading mt-6">
-                +91 7904105103
-              </h1>
-
-              {/* Website */}
-              <h3 className="text-center gold-gradient-text !font-primary subheading !text-4xl xl:!text-7xl">
-                Mahavilvam@Aimhi
-              </h3>
-
-            </div>
-
-          </div>
+          {/* Website */}
+          <h3 className="text-center gold-gradient-text !font-primary subheading !text-6xl">
+            Mahavilvam@hi
+          </h3>
 
         </div>
       </div>

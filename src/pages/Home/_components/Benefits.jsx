@@ -26,48 +26,53 @@ export default function Benefits() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          toggleActions: "restart none restart none",
-        },
-      });
+      const mm = gsap.matchMedia();
 
-      // First Row (Left + Right together)
-      tl.from(
-        [".left-0", ".right-0"],
-        {
-          y: -150,
-          opacity: 0,
-          duration: 0.9,
-          ease: "power3.out",
-        }
-      )
+      // Only animate on desktop/large screens (>= 1024px)
+      mm.add("(min-width: 1024px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+            toggleActions: "restart none restart none",
+          },
+        });
 
-        // Second Row (Left + Right together)
-        .from(
-          [".left-1", ".right-1"],
+        // First Row (Left + Right together)
+        tl.from(
+          [".left-0", ".right-0"],
           {
             y: -150,
             opacity: 0,
             duration: 0.9,
             ease: "power3.out",
-          },
-          "+=0.2"
+          }
         )
 
-        // Third Row (Only Left)
-        .from(
-          ".left-2",
-          {
-            y: -150,
-            opacity: 0,
-            duration: 0.9,
-            ease: "power3.out",
-          },
-          "+=0.2"
-        );
+          // Second Row (Left + Right together)
+          .from(
+            [".left-1", ".right-1"],
+            {
+              y: -150,
+              opacity: 0,
+              duration: 0.9,
+              ease: "power3.out",
+            },
+            "+=0.2"
+          )
+
+          // Third Row (Only Left)
+          .from(
+            ".left-2",
+            {
+              y: -150,
+              opacity: 0,
+              duration: 0.9,
+              ease: "power3.out",
+            },
+            "+=0.2"
+          );
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -91,14 +96,14 @@ export default function Benefits() {
         <ReusableSvg />
 
         {/* Content */}
-        <div className="grid grid-cols-3 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-10 lg:gap-0 mt-10">
 
           {/* Left */}
-          <div className="flex flex-col items-end gap-20 font-primary text-3xl">
+          <div className="flex flex-col items-center lg:items-end gap-6 lg:gap-20 font-primary order-2 lg:order-1">
             {leftBenefits.map((benefit, index) => (
               <div
                 key={benefit}
-                className={`left-${index} relative w-[430px] h-[90px]`}
+                className={`left-${index} relative w-full max-w-[430px] aspect-[430/90]`}
               >
                 <img
                   src={Box}
@@ -106,7 +111,7 @@ export default function Benefits() {
                   className="w-full h-full object-contain"
                 />
 
-                <div className="absolute inset-0 flex items-center justify-center text-white font-medium">
+                <div className="absolute inset-0 flex items-center justify-center text-white font-medium text-lg sm:text-xl lg:text-3xl px-6 text-center">
                   {benefit}
                 </div>
               </div>
@@ -114,20 +119,20 @@ export default function Benefits() {
           </div>
 
           {/* Plant */}
-          <div className="flex justify-center w-full mx-auto">
+          <div className="flex justify-center w-full max-w-[280px] sm:max-w-[360px] lg:max-w-none mx-auto order-1 lg:order-2">
             <img
               src={Pot}
               alt="Mahavilvam Plant"
-              className="w-full h-full object-contain"
+              className="w-full h-auto object-contain"
             />
           </div>
 
           {/* Right */}
-          <div className="flex flex-col items-start gap-20 font-primary text-3xl">
+          <div className="flex flex-col items-center lg:items-start gap-6 lg:gap-20 font-primary order-3 lg:order-3">
             {rightBenefits.map((benefit, index) => (
               <div
                 key={benefit}
-                className={`right-${index} relative w-[430px] h-[90px]`}
+                className={`right-${index} relative w-full max-w-[430px] aspect-[430/90]`}
               >
                 <img
                   src={Box}
@@ -135,7 +140,7 @@ export default function Benefits() {
                   className="w-full h-full object-contain rotate-180"
                 />
 
-                <div className="absolute inset-0 flex items-center justify-center text-white font-medium">
+                <div className="absolute inset-0 flex items-center justify-center text-white font-medium text-lg sm:text-xl lg:text-3xl px-6 text-center">
                   {benefit}
                 </div>
               </div>
