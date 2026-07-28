@@ -86,6 +86,73 @@ export default function Benefits() {
     return () => ctx.revert();
   }, []);
 
+  // const sectionRef = useRef(null);
+
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     const mm = gsap.matchMedia();
+
+  //     // ================= DESKTOP & TV ANIMATION (>= 1024px) =================
+  //     mm.add("(min-width: 1024px)", () => {
+  //       const tl = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: sectionRef.current,
+  //           start: "top 70%",
+  //           toggleActions: "restart none restart none",
+  //         },
+  //       });
+
+  //       // First Row
+  //       tl.from([".left-0", ".right-0"], {
+  //         y: -120,
+  //         opacity: 0,
+  //         duration: 0.8,
+  //         ease: "power3.out",
+  //       })
+  //         // Second Row
+  //         .from(
+  //           [".left-1", ".right-1"],
+  //           {
+  //             y: -120,
+  //             opacity: 0,
+  //             duration: 0.8,
+  //             ease: "power3.out",
+  //           },
+  //           "+=0.15",
+  //         )
+  //         // Third Row
+  //         .from(
+  //           ".left-2",
+  //           {
+  //             y: -120,
+  //             opacity: 0,
+  //             duration: 0.8,
+  //             ease: "power3.out",
+  //           },
+  //           "+=0.15",
+  //         );
+  //     });
+
+  //     // ================= MOBILE & TABLET ANIMATION (< 1024px) =================
+  //     mm.add("(max-width: 1023px)", () => {
+  //       gsap.from(".benefit-box-mobile", {
+  //         y: -60,
+  //         opacity: 0,
+  //         duration: 1.1,
+  //         stagger: 0.28,
+  //         ease: "power3.out",
+  //         scrollTrigger: {
+  //           trigger: sectionRef.current,
+  //           start: "top 70%",
+  //           toggleActions: "restart none restart none",
+  //         },
+  //       });
+  //     });
+  //   }, sectionRef);
+
+  //   return () => ctx.revert();
+  // }, []);
+
   return (
     <section
       ref={sectionRef}
@@ -93,7 +160,6 @@ export default function Benefits() {
     >
 
       <img src={CommonBg} alt="Common Background" className="absolute inset-0 w-full h-full object-cover" />
-      {/* Falling Leaves Layer */}
       <FallingLeaves count={12} />
 
       <div className="container relative z-10">

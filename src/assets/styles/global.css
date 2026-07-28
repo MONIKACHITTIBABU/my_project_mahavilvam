@@ -198,3 +198,9 @@
 .location-card-text {
   @apply font-secondary text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold
 }
+
+
+/* Footer Text Size */
+.footer-heading {
+  @apply font-primary font-bold uppercase tracking-wider text-[#D9A329] text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl
+}

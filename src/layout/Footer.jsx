@@ -1,3 +1,4 @@
+import React from "react";
 import { Icon } from "@iconify/react";
 import { PiPlantFill } from "react-icons/pi";
 import FallingLeaves from "../components/FallingLeaves";
@@ -14,25 +15,25 @@ export default function Footer() {
       />
       <FallingLeaves count={12} />
 
-      <div className="relative container z-10 border-2 border-[#D9A329] rounded-2xl bg-black p-2 md:p-4 lg:p-6 text-center">
+      <div className="relative w-full max-w-[95%] mx-auto z-10 border-2 border-[#D9A329] rounded-2xl bg-black p-3 md:p-4 lg:p-6 text-center">
         <div className="flex flex-col items-center justify-center w-full">
           {/* Top icons — desktop only */}
-          <div className="hidden md:flex items-center justify-between w-full mb-3">
-            <div className="w-16 h-16 lg:w-18 lg:h-18 2xl:w-20 2xl:h-20 rounded-full bg-[#D9A329] flex items-center justify-center text-[#031312] shadow-xl shrink-0">
+          <div className="hidden md:flex items-start justify-between w-full mb-3">
+            <div className="w-16 h-16 lg:w-18 lg:h-18 2xl:w-20 2xl:h-20 rounded-full bg-[#D9A329] flex items-center justify-center text-white shadow-xl shrink-0">
               <Icon icon="gg:phone" className="text-3xl lg:text-4xl 2xl:text-5xl" />
             </div>
 
-            <h3 className="font-primary font-bold tracking-wider text-[#D9A329] text-2xl lg:text-3xl xl:text-4xl uppercase px-4">
+            <h3 className="footer-heading">
               BOOK YOUR DIVINE PLANT TODAY!
             </h3>
 
-            <div className="w-16 h-16 lg:w-18 lg:h-18 2xl:w-20 2xl:h-20 rounded-full bg-[#D9A329] flex items-center justify-center text-[#031312] shadow-xl shrink-0">
+            <div className="w-16 h-16 lg:w-18 lg:h-18 2xl:w-20 2xl:h-20 rounded-full bg-[#D9A329] flex items-center justify-center text-white shadow-xl shrink-0">
               <PiPlantFill className="text-3xl lg:text-4xl 2xl:text-5xl" />
             </div>
           </div>
 
           {/* Headline — mobile only */}
-          <h3 className="md:hidden font-primary font-bold tracking-wide text-[#D9A329] text-lg sm:text-xl my-2 uppercase">
+          <h3 className="md:hidden footer-heading ">
             BOOK YOUR DIVINE PLANT TODAY!
           </h3>
 

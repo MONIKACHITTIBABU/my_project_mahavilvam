@@ -5,6 +5,7 @@ import Benefits from "./_components/Benefits";
 import Location from "./_components/Location";
 import Purpose from "./_components/Purpose";
 
+
 export default function Home() {
   return (
     <>

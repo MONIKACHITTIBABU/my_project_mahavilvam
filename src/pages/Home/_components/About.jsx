@@ -2,6 +2,7 @@ import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import AboutGif from "../../../assets/images/Gif/AboutGif.gif";
 import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDesign.png";
 
+
 import ScrollReveal from "../../../components/ScrollReveal";
 import ReusableSvg from "../../../components/ReusableSvg";
 import FallingLeaves from "../../../components/FallingLeaves";
@@ -30,6 +31,7 @@ export default function About({
         {/* Left Plant GIF Container */}
         <div className="w-full h-auto md:max-w-[40%] lg:max-w-[35%]">
           <img
+            src={AboutGif}
             src={AboutGif}
             alt="Mahavilvam Plant"
             className="w-full h-full object-cover"
