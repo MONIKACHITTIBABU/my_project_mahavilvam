@@ -21,9 +21,13 @@ export default function Footer() {
           
           {/* MOBILE (order-1) & DESKTOP (Top Bar): Icons section */}
           <div className="order-1 flex items-center justify-center gap-6 sm:gap-8 md:gap-0 md:justify-between w-full mb-3 sm:mb-4 md:mb-3">
+            
             {/* Left Phone Icon */}
             <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 2xl:w-32 2xl:h-32 rounded-full bg-[#D9A329] flex items-center justify-center text-[#031312] shadow-xl shrink-0">
-              <Icon icon="gg:phone" className="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl" />
+              <Icon
+                icon="gg:phone"
+                className="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+              />
             </div>
 
             {/* Desktop Headline */}
@@ -54,9 +58,6 @@ export default function Footer() {
 
         </div>
       </div>
-      </div>
-      </div>
-      </div>
-    </section>
+    </footer>
   );
 }
