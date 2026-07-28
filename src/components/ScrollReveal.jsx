@@ -58,6 +58,7 @@ const ScrollReveal = ({
               start: "top bottom",
               end: rotationEnd,
               scrub: true,
+              // markers: true,
             },
           }
         );
@@ -78,10 +79,11 @@ const ScrollReveal = ({
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: "top 80%", // Reveal starts when top of text hits 80% viewport height
-          end: "bottom 35%",   // Completes when bottom hits 35% viewport height
+          start: "top bottom", // Reveal starts when top of text hits 80% viewport height
+          end: "bottom 80%",   // Completes when bottom hits 35% viewport height
           scrub: 0.1,         // Smooth tight snapping tied to scroll movement
           invalidateOnRefresh: true,
+          // markers: true,
         },
       });
 

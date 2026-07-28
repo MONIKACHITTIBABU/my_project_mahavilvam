@@ -7,8 +7,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-[#031312]/20 backdrop-blur-md text-white">
-        <nav className="flex items-center justify-between px-6 py-6">
+      <header className="fixed top-0 left-0 w-full z-50 bg-[#1C2A29]/20 text-white">
+        <nav className="flex items-center justify-between px-6 py-3">
           <div className="hidden sm:flex mx-auto gap-10 font-primary">
             <NavLink
               to="/"

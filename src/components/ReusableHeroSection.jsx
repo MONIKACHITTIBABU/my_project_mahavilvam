@@ -16,7 +16,9 @@ export default function ReusableHeroSection({
             {/* Mobile Background */}
             <img src={MobileBg} alt="" className="block lg:hidden absolute inset-0 w-full h-full object-cover object-top z-0" />
 
+            {/* Falling Leaves Layer (Sits at z-1, behind text/gradient overlay) */}
             
+
             {/* Bottom Gradient Overlay */}
             <div className="absolute bottom-0 w-full h-[60vh] bg-gradient-to-t from-[#A78116] via-black/10 to-transparent z-20"></div>
 
