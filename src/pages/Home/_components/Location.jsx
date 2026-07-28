@@ -1,4 +1,5 @@
-import Location from "../../../assets/images/HomePageImages/LocationImages/Location.png";
+import ChennaiImage from "../../../assets/images/HomePageImages/LocationImages/ChennaiImage.jpeg";
+import VelloreImage from "../../../assets/images/HomePageImages/LocationImages/VelloreImage.jpg";
 import ChennaiVideo from "../../../assets/images/HomePageImages/LocationImages/ChennaiVideo.mp4";
 import VelloreVideo from "../../../assets/images/HomePageImages/LocationImages/VelloreVideo.mp4";
 import CommonBg from "../../../assets/images/Common/CommonBg.png";
@@ -13,28 +14,21 @@ export default function LocationsSection() {
         backgroundImage: `url(${CommonBg})`,
       }}
     >
-      {/* Falling Leaves Layer */}
       <FallingLeaves count={12} />
 
       <div className="container relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 xl:gap-16">
 
-        {/* Chennai Card */}
+        {/* ================= Chennai Card ================= */}
         <div className="w-full max-w-[600px] rounded-[24px] border-2 border-[#C89B3C] bg-[#021A17] overflow-hidden shadow-lg">
 
-          {/* Header */}
-          <div className="h-20 sm:h-24 lg:h-[110px] flex items-center justify-center">
-            <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-3xl sm:text-4xl lg:text-5xl font-semibold">
-              CHENNAI
-            </h2>
-          </div>
+          {/* ---------- Mobile Layout ---------- */}
+          <div className="block lg:hidden">
 
-          {/* Image + Video */}
-          <div className="grid grid-cols-2">
             {/* Image */}
             <img
-              src={Location}
+              src={ChennaiImage}
               alt="Chennai"
-              className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[500px] object-cover"
+              className="w-full h-[220px] object-cover"
             />
 
             {/* Video */}
@@ -44,8 +38,46 @@ export default function LocationsSection() {
               muted
               loop
               playsInline
-              className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[500px] object-cover"
+              className="w-full h-[220px] object-cover"
             />
+
+            {/* Title */}
+            <div className="h-16 flex items-center justify-center">
+              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-2xl font-semibold">
+                CHENNAI
+              </h2>
+            </div>
+
+          </div>
+
+          {/* ---------- Desktop Layout ---------- */}
+          <div className="hidden lg:block">
+
+            {/* Header */}
+            <div className="h-[110px] flex items-center justify-center">
+              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-5xl font-semibold">
+                CHENNAI
+              </h2>
+            </div>
+
+            {/* Image + Video */}
+            <div className="grid grid-cols-2">
+              <img
+                src={ChennaiImage}
+                alt="Chennai"
+                className="w-full h-[500px] object-cover"
+              />
+
+              <video
+                src={ChennaiVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-[500px] object-cover"
+              />
+            </div>
+
           </div>
         </div>
 
@@ -56,23 +88,17 @@ export default function LocationsSection() {
           className="hidden lg:block h-[360px] xl:h-[480px] object-contain"
         />
 
-        {/* Vellore Card */}
+        {/* ================= Vellore Card ================= */}
         <div className="w-full max-w-[600px] rounded-[24px] border-2 border-[#C89B3C] bg-[#021A17] overflow-hidden shadow-lg">
 
-          {/* Header */}
-          <div className="h-20 sm:h-24 lg:h-[110px] flex items-center justify-center">
-            <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-3xl sm:text-4xl lg:text-5xl font-semibold">
-              VELLORE
-            </h2>
-          </div>
+          {/* ---------- Mobile Layout ---------- */}
+          <div className="block lg:hidden">
 
-          {/* Image + Video */}
-          <div className="grid grid-cols-2">
             {/* Image */}
             <img
-              src={Location}
+              src={VelloreImage}
               alt="Vellore"
-              className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[500px] object-cover"
+              className="w-full h-[220px] object-cover"
             />
 
             {/* Video */}
@@ -82,8 +108,46 @@ export default function LocationsSection() {
               muted
               loop
               playsInline
-              className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[500px] object-cover"
+              className="w-full h-[220px] object-cover"
             />
+
+            {/* Title */}
+            <div className="h-16 flex items-center justify-center">
+              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-2xl font-semibold">
+                VELLORE
+              </h2>
+            </div>
+
+          </div>
+
+          {/* ---------- Desktop Layout ---------- */}
+          <div className="hidden lg:block">
+
+            {/* Header */}
+            <div className="h-[110px] flex items-center justify-center">
+              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-5xl font-semibold">
+                VELLORE
+              </h2>
+            </div>
+
+            {/* Image + Video */}
+            <div className="grid grid-cols-2">
+              <img
+                src={VelloreImage}
+                alt="Vellore"
+                className="w-full h-[500px] object-cover"
+              />
+
+              <video
+                src={VelloreVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-[500px] object-cover"
+              />
+            </div>
+
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 import LocationnBg from "../assets/images/LocationImages/LocationHeroImages/LocationnBg.png";
 import MobileBg from "../assets/images/LocationImages/LocationHeroImages/MobileBg.png";
 
+
 export default function ReusableHeroSection({
     title1,
     title2,
