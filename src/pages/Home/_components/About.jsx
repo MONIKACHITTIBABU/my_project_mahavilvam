@@ -73,7 +73,6 @@
 // //   );
 // // }
 
-
 // import CommonBg from "../../../assets/images/Common/CommonBg.png";
 // import AboutGif from "../../../assets/images/Gif/AboutGif.gif";
 // import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDesign.png";
@@ -103,7 +102,7 @@
 
 //       {/* Main Container */}
 //       <div className="container relative z-20 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6 md:px-8">
-        
+
 //         {/* Left Plant GIF */}
 //         <div className="w-full md:w-[45%] lg:w-[40%] flex justify-center items-center">
 //           <img
@@ -115,7 +114,7 @@
 
 //         {/* Right Content Block */}
 //         <div className="w-full md:w-[55%] lg:w-[60%] flex items-center justify-center lg:justify-end gap-3 sm:gap-5 md:gap-6 lg:gap-8">
-          
+
 //           {/* Text Container */}
 //           <div className="w-full text-center lg:text-left flex flex-col items-center lg:items-start justify-center">
 //             <ScrollReveal
@@ -174,36 +173,33 @@ export default function About({
       <FallingLeaves count={12} />
 
       {/* Main Content Container */}
-      <div className="container relative z-20 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6 md:px-8">
-        
+      <div className="container relative z-20 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-20 px-4 sm:px-6 md:px-8">
         {/* Left Plant GIF Container */}
-        <div className="w-full md:w-[42%] lg:w-[38%] flex justify-center items-center">
+        <div className="w-full md:w-[42%] h-[700p] lg:w-[38%]  flex justify-center items-center">
           <img
             src={AboutGif}
             alt="Mahavilvam Plant"
-            className="w-3/4 sm:w-2/3 md:w-full lg:w-[85%] max-w-xs sm:max-w-sm md:max-w-none h-auto object-contain transition-all duration-300"
+            className="w-3/4 sm:w-2/3 md:w-full max-w-xs sm:max-w-sm md:max-w-none h-auto object-contain transition-all duration-300"
           />
         </div>
 
         {/* Right Content Block - Wrapped in relative container for precise side-design alignment */}
-        <div className="relative w-full md:w-[58%] lg:w-[62%] 2xl:w-[90%] flex items-center justify-between gap-2 sm:gap-4 md:gap-6">
-          
+        <div className="relative w-full md:w-[58%] lg:w-[62%] flex items-center justify-between gap-2 sm:gap-4">
           {/* Main Text & Vector Divider Wrapper */}
-          <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start justify-center">
-            
+          <div className="flex-1 text-center lg:text-left flex flex-col items-center justify-center">
             {/* Description Text */}
             <ScrollReveal
               baseOpacity={baseOpacity}
               enableBlur={enableBlur}
               baseRotation={baseRotation}
               blurStrength={blurStrength}
-              textClassName="!gradient-text font-primary leading-relaxed text-sm xs:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-6xl"
+              textClassName="!gradient-text font-primary leading-relaxed text-sm xs:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl"
             >
               {description}
             </ScrollReveal>
 
             {/* Bottom Ornamental Vector (Width Slightly Increased) */}
-            <div className="mt-4 sm:mt-6 w-full flex justify-center lg:justify-start">
+            <div className="mt-4 sm:mt-6 w-full flex justify-center">
               <div className="w-70 xs:w-48 sm:w-60 md:w-80 lg:w-108 xl:w-190 h-auto max-h-16 overflow-hidden flex items-center justify-center">
                 <ReusableSvg />
               </div>
@@ -218,9 +214,7 @@ export default function About({
               className="h-full max-h-48 xs:max-h-56 sm:max-h-64 md:max-h-72 lg:max-h-80 xl:max-h-96 w-auto max-w-[16px] xs:max-w-[20px] sm:max-w-[28px] md:max-w-[36px] lg:max-w-[44px] object-contain"
             />
           </div>
-
         </div>
-
       </div>
     </section>
   );

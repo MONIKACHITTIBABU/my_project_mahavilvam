@@ -337,7 +337,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Pot from "../../../assets/images/HomePageImages/BenefitsImage/Pot.png";
-import CommonBg from '../../../assets/images/Common/CommonBg.png';
+import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import ReusableSvg from "../../../components/ReusableSvg";
 import Box from "../../../assets/images/HomePageImages/BenefitsImage/Box.png";
 import FallingLeaves from "../../../components/FallingLeaves";
@@ -350,10 +350,7 @@ const leftBenefits = [
   "Medicinal Treasure",
 ];
 
-const rightBenefits = [
-  "Wealth-Luck Prosperity",
-  "High Oxygen Release",
-];
+const rightBenefits = ["Wealth-Luck Prosperity", "High Oxygen Release"];
 
 export default function Benefits() {
   const sectionRef = useRef(null);
@@ -379,20 +376,28 @@ export default function Benefits() {
           duration: 0.8,
           ease: "power3.out",
         })
-        // Second Row
-        .from([".left-1", ".right-1"], {
-          y: -120,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-        }, "+=0.15")
-        // Third Row
-        .from(".left-2", {
-          y: -120,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-        }, "+=0.15");
+          // Second Row
+          .from(
+            [".left-1", ".right-1"],
+            {
+              y: -120,
+              opacity: 0,
+              duration: 0.8,
+              ease: "power3.out",
+            },
+            "+=0.15",
+          )
+          // Third Row
+          .from(
+            ".left-2",
+            {
+              y: -120,
+              opacity: 0,
+              duration: 0.8,
+              ease: "power3.out",
+            },
+            "+=0.15",
+          );
       });
 
       // ================= MOBILE & TABLET ANIMATION (< 1024px) =================
@@ -434,7 +439,6 @@ export default function Benefits() {
 
         {/* Main Grid Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-6 lg:gap-0 2xl:gap-16 mt-6 sm:mt-10 2xl:mt-24">
-
           {/* Center Plant Pot */}
           <div className="flex justify-center w-full max-w-[180px] xs:max-w-[220px] sm:max-w-[300px] lg:max-w-none 2xl:max-w-[650px] 3xl:max-w-[800px] mx-auto order-1 lg:order-2 my-2 sm:my-4 lg:my-0">
             <img
@@ -462,7 +466,7 @@ export default function Benefits() {
                 />
 
                 {/* Text sized to 6xl on 2xl screens, 7xl on 3xl screens */}
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm xs:text-base sm:text-lg lg:text-3xl 2xl:text-6xl px-3 sm:px-6 2xl:px-12 text-center leading-tight">
+                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm xs:text-base sm:text-lg lg:text-3xl 2xl:text-3xl px-3 sm:px-6 2xl:px-12 text-center leading-tight">
                   {benefit}
                 </div>
               </div>
@@ -487,13 +491,12 @@ export default function Benefits() {
                 />
 
                 {/* Text sized to 6xl on 2xl screens, 7xl on 3xl screens */}
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm xs:text-base sm:text-lg lg:text-3xl 2xl:text-6xl 3xl:text-7xl px-3 sm:px-6 2xl:px-12 text-center leading-tight">
+                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm xs:text-base sm:text-lg lg:text-3xl 2xl:text-3xl px-3 sm:px-6 2xl:px-12 text-center leading-tight">
                   {benefit}
                 </div>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
