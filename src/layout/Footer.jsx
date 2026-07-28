@@ -81,6 +81,7 @@ export default function Footer() {
           
           {/* MOBILE (order-1) & DESKTOP (Top Bar): Icons section */}
           <div className="order-1 flex items-center justify-center gap-6 sm:gap-8 md:gap-0 md:justify-between w-full mb-3 sm:mb-4 md:mb-3">
+            
             {/* Left Phone Icon */}
             <div className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 2xl:w-20 2xl:h-20 rounded-full bg-[#D9A329] flex items-center justify-center text-[#031312] shadow-xl shrink-0">
               <Icon icon="gg:phone" className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl" />

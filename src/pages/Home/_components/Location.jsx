@@ -16,10 +16,10 @@ export default function LocationsSection() {
     >
       <FallingLeaves count={12} />
 
-      <div className="container relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 xl:gap-16">
+      <div className="container relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 xl:gap-12 px-4">
 
         {/* ================= Chennai Card ================= */}
-        <div className="w-full max-w-[600px] rounded-[24px] border-2 border-[#C89B3C] bg-[#021A17] overflow-hidden shadow-lg">
+        <div className="w-full max-w-[460px] lg:max-w-[500px] xl:max-w-[520px] rounded-[24px] border-2 border-[#C89B3C] bg-[#021A17] overflow-hidden shadow-lg">
 
           {/* ---------- Mobile Layout ---------- */}
           <div className="block lg:hidden">
@@ -54,8 +54,8 @@ export default function LocationsSection() {
           <div className="hidden lg:block">
 
             {/* Header */}
-            <div className="h-[110px] flex items-center justify-center">
-              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-5xl font-semibold">
+            <div className="h-[70px] xl:h-[80px] flex items-center justify-center">
+              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-3xl xl:text-4xl font-semibold">
                 CHENNAI
               </h2>
             </div>
@@ -65,7 +65,7 @@ export default function LocationsSection() {
               <img
                 src={ChennaiImage}
                 alt="Chennai"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[360px] xl:h-[400px] object-cover"
               />
 
               <video
@@ -74,7 +74,7 @@ export default function LocationsSection() {
                 muted
                 loop
                 playsInline
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[360px] xl:h-[400px] object-cover"
               />
             </div>
 
@@ -85,11 +85,11 @@ export default function LocationsSection() {
         <img
           src={SideDesign}
           alt="Separator"
-          className="hidden lg:block h-[360px] xl:h-[480px] object-contain"
+          className="hidden lg:block h-[280px] xl:h-[340px] object-contain"
         />
 
         {/* ================= Vellore Card ================= */}
-        <div className="w-full max-w-[600px] rounded-[24px] border-2 border-[#C89B3C] bg-[#021A17] overflow-hidden shadow-lg">
+        <div className="w-full max-w-[460px] lg:max-w-[500px] xl:max-w-[520px] rounded-[24px] border-2 border-[#C89B3C] bg-[#021A17] overflow-hidden shadow-lg">
 
           {/* ---------- Mobile Layout ---------- */}
           <div className="block lg:hidden">
@@ -124,8 +124,8 @@ export default function LocationsSection() {
           <div className="hidden lg:block">
 
             {/* Header */}
-            <div className="h-[110px] flex items-center justify-center">
-              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-5xl font-semibold">
+            <div className="h-[70px] xl:h-[80px] flex items-center justify-center">
+              <h2 className="text-[#D8A94A] gold-gradient-text font-secondary text-3xl xl:text-4xl font-semibold">
                 VELLORE
               </h2>
             </div>
@@ -135,7 +135,7 @@ export default function LocationsSection() {
               <img
                 src={VelloreImage}
                 alt="Vellore"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[360px] xl:h-[400px] object-cover"
               />
 
               <video
@@ -144,7 +144,7 @@ export default function LocationsSection() {
                 muted
                 loop
                 playsInline
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[360px] xl:h-[400px] object-cover"
               />
             </div>
 
