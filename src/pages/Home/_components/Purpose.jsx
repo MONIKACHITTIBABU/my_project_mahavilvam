@@ -1,6 +1,8 @@
-import PurposeBg from "../../../assets/images/HomePageImages/PurposeImages/PurposeBg.png";
+import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import VectorDesign from "../../../assets/images/HomePageImages/PurposeImages/VectorDesign.png";
+import ReusableSvg from "../../../components/ReusableSvg";
 import PurposeCard from "./PurposeCard";
+import FallingLeaves from "../../../components/FallingLeaves";
 
 export default function Purpose() {
   const purposeCards = [
@@ -11,9 +13,9 @@ export default function Purpose() {
     {
       type: "Environmental",
       items: [
-        "Atmospheric Purification",
-        "High Oxygen Release",
         "Cooling - Energizing",
+        "High Oxygen Release",
+        "Atmospheric Purification",
       ],
       offset: true, // Move this card down
     },
@@ -24,26 +26,18 @@ export default function Purpose() {
   ];
 
   return (
-    <section className="relative py-10 overflow-hidden">
-      <img
-        src={PurposeBg}
-        alt=""
-        className="absolute inset-0 -z-10 w-full h-full object-cover"
-      />
+    <section className="relative py-6 md:py-10 overflow-hidden">
 
-      <div className="container z-10">
+      <img src={CommonBg} alt="" className="absolute inset-0 w-full h-full object-cover -z-10" />
+      <FallingLeaves count={12} />
+
+      <div className="container relative z-10">
         {/* Heading */}
-        <h1 className="text-center gradient-text text-7xl font-secondary font-semibold z-10">
-          THE PURPOSE
-        </h1>
-        <img
-          src={VectorDesign}
-          alt="Vector Design"
-          className="w-full max-w-[600px] my-8 mx-auto"
-        />
+        <h1 className="heading gradient-text">THE PURPOSE</h1>
+        <ReusableSvg />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 justify-center gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 max-w-7xl mx-auto justify-center gap-8 md:gap-12mt-10 md:mt-16">
           {purposeCards.map((card, index) => (
             <div key={index} className={card.offset ? "md:mt-20" : ""}>
               <PurposeCard type={card.type} items={card.items} />

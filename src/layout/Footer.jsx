@@ -1,55 +1,56 @@
 import { Icon } from "@iconify/react";
-import FooterBg from "../assets/images/Footer/FooterBg.png";
+import { PiPlantFill } from "react-icons/pi";
+import FallingLeaves from "../components/FallingLeaves";
+import CommonBg from "../assets/images/Common/CommonBg.png";
 
 export default function Footer() {
   return (
-    <section
-      className="w-full py-6 md:py-10"
-      style={{
-        backgroundImage: `url(${FooterBg})`,
-      }}
-    >
-      <div className="container">
-        <div className="bg-[#021A17] border-2 border-[#C89B3C] rounded-2xl lg:rounded-[24px] px-5 sm:px-6 md:px-8 lg:px-10 py-6 md:py-8">
+    <footer className="relative w-full py-6 md:py-10 flex justify-center items-center overflow-hidden">
+      <img
+        src={CommonBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+        aria-hidden="true"
+      />
+      <FallingLeaves count={12} />
 
-          {/* Top Row */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
-
-            {/* Phone Icon */}
-            <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-[#C89B3C] flex items-center justify-center flex-shrink-0">
-              <Icon
-                icon="gg:phone"
-                className="text-white text-5xl"
-              />
+      <div className="relative container z-10 border-2 border-[#D9A329] rounded-2xl bg-black p-2 md:p-4 lg:p-6 text-center">
+        <div className="flex flex-col items-center justify-center w-full">
+          {/* Top icons — desktop only */}
+          <div className="hidden md:flex items-center justify-between w-full mb-3">
+            <div className="w-16 h-16 lg:w-18 lg:h-18 2xl:w-20 2xl:h-20 rounded-full bg-[#D9A329] flex items-center justify-center text-[#031312] shadow-xl shrink-0">
+              <Icon icon="gg:phone" className="text-3xl lg:text-4xl 2xl:text-5xl" />
             </div>
 
-            {/* Heading */}
-            <h2 className=" text-[#D8A94A] font-outfit font-semibold text-center leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-2">
+            <h3 className="font-primary font-bold tracking-wider text-[#D9A329] text-2xl lg:text-3xl xl:text-4xl uppercase px-4">
               BOOK YOUR DIVINE PLANT TODAY!
-            </h2>
+            </h3>
 
-            {/* Plant Icon */}
-            <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-[#C89B3C] flex items-center justify-center flex-shrink-0">
-              <Icon
-                icon="mdi:sprout"
-                className="text-white text-5xl"
-              />
+            <div className="w-16 h-16 lg:w-18 lg:h-18 2xl:w-20 2xl:h-20 rounded-full bg-[#D9A329] flex items-center justify-center text-[#031312] shadow-xl shrink-0">
+              <PiPlantFill className="text-3xl lg:text-4xl 2xl:text-5xl" />
             </div>
-
           </div>
 
-          {/* Phone Number */}
-          <h1 className="text-center text-white font-primary font-bold mt-5 md:mt-6 text-3xl sm:text-2xl md:text-3xl lg:text-6xl break-all">
-            918939070940
-          </h1>
-
-          {/* Website */}
-          <h3 className="text-center text-[#D8A94A] font-primary font-semibold mt-3 md:mt-4 text-MD sm:text-xl md:text-2xl lg:text-4xl break-all">
-            www.Mahavilvam@Aimhi.com
+          {/* Headline — mobile only */}
+          <h3 className="md:hidden font-primary font-bold tracking-wide text-[#D9A329] text-lg sm:text-xl my-2 uppercase">
+            BOOK YOUR DIVINE PLANT TODAY!
           </h3>
 
+          {/* Phone number — icon on left for mobile only */}
+          <div className="flex items-center justify-center gap-3 sm:gap-4 my-2 xs:my-3 md:my-5">
+            <div className="md:hidden w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-full bg-[#D9A329] flex items-center justify-center text-[#031312] shadow-xl shrink-0">
+              <Icon icon="gg:phone" className="text-lg xs:text-xl sm:text-2xl" />
+            </div>
+            <div className="font-primary font-black tracking-normal xs:tracking-wider text-white text-3xl sm:text-5xl md:text-7xl xl:text-8xl whitespace-nowrap">
+              +91 79041 05103
+            </div>
+          </div>
+
+          <span className="font-primary font-medium text-[#D9A329] text-2xl sm:text-lg md:text-5xl xl:text-6xl tracking-wide mt-1">
+            Mahavilvam@AIM HI
+          </span>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

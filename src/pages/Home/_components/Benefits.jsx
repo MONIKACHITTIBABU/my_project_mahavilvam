@@ -1,6 +1,14 @@
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Pot from "../../../assets/images/HomePageImages/BenefitsImage/Pot.png";
-import BenefitsBg from "../../../assets/images/HomePageImages/BenefitsImage/BenefitsBg.png";
-import VectorDesign from "../../../assets/images/HomePageImages/BenefitsImage/VectorDesign.png";
+import CommonBg from "../../../assets/images/Common/CommonBg.png";
+import ReusableSvg from "../../../components/ReusableSvg";
+import FallingLeaves from "../../../components/FallingLeaves";
+import BenefitBox from "./BenefitBox";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const leftBenefits = [
   "Divine Connection",
@@ -11,39 +19,123 @@ const leftBenefits = [
 const rightBenefits = ["Wealth-Luck Prosperity", "High Oxygen Release"];
 
 export default function Benefits() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
+
+      // ================= DESKTOP & TV ANIMATION (>= 1024px) =================
+      mm.add("(min-width: 1024px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            toggleActions: "restart none restart none",
+          },
+        });
+
+        // First Row
+        tl.from([".left-0", ".right-0"], {
+          y: -120,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+        })
+          // Second Row
+          .from(
+            [".left-1", ".right-1"],
+            {
+              y: -120,
+              opacity: 0,
+              duration: 0.8,
+              ease: "power3.out",
+            },
+            "+=0.15",
+          )
+          // Third Row
+          .from(
+            ".left-2",
+            {
+              y: -120,
+              opacity: 0,
+              duration: 0.8,
+              ease: "power3.out",
+            },
+            "+=0.15",
+          );
+      });
+
+      // ================= MOBILE & TABLET ANIMATION (< 1024px) =================
+      mm.add("(max-width: 1023px)", () => {
+        gsap.from(".benefit-box-mobile", {
+          y: -60,
+          opacity: 0,
+          duration: 1.1,
+          stagger: 0.28,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            toggleActions: "restart none restart none",
+          },
+        });
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section
-      className="bg-cover bg-center bg-no-repeat py-24 overflow-hidden"
-      style={{ backgroundImage: `url(${BenefitsBg})`,}}>
-      <div className="container">
+      ref={sectionRef}
+      className="relative isolate py-6 md:py-10 overflow-hidden"
+    >
+
+      <img src={CommonBg} alt="Common Background" className="absolute inset-0 w-full h-full object-cover" />
+      {/* Falling Leaves Layer */}
+      <FallingLeaves count={12} />
+
+      <div className="container relative z-10">
         {/* Heading */}
-        <h2 className="text-center text-[#D8A94A] text-7xl gradient-text font-secondary uppercase font-semibold mb-20">
+        <h2 className="heading gradient-text">
           Benefits Of Mahavilvam
         </h2>
-        <img src={VectorDesign} alt="Vector Design" className="w-[689px] mt-8 mx-auto" />
 
-        {/* Content */}
-        <div className="grid grid-cols-3 items-center">
-          {/* Left Benefits */}
-          <div className="flex flex-col items-end font-primary text-3xl gap-20">
-            {leftBenefits.map((benefit) => (
-              <div key={benefit} className=" w-full py-3 rounded-full text-center text-white font-medium border border-[#F3D58C] shadow-lg bg-gradient-to-r from-[#B56A10] via-[#E5B85A] to-[#B56A10]" >
-                {benefit}
-              </div>
+        <ReusableSvg />
+
+        {/* Main Grid Content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-3 xl:gap-6">
+          {/* Left Column Benefits */}
+          <div className="flex flex-col gap-3 md:gap-8 lg:gap-20 2xl:gap-32 order-2 md:order-1">
+            {leftBenefits.map((benefit, index) => (
+              <BenefitBox
+                key={benefit}
+                benefit={benefit}
+                index={index}
+                side="left"
+              />
             ))}
           </div>
 
-          {/* Plant */}
-          <div className="flex justify-center w-full mx-auto">
-            <img src={Pot} alt="Mahavilvam Plant" className="w-full h-full object-contain" />
+          {/* Center Plant Pot */}
+          <div className="flex justify-center w-full max-w-[180px] lg:max-w-none mx-auto order-1 lg:order-2 my-2 sm:my-4 lg:my- 0">
+            <img
+              src={Pot}
+              alt="Mahavilvam Plant"
+              className="w-full h-auto object-cover"
+            />
           </div>
 
-          {/* Right Benefits */}
-          <div className="flex flex-col items-start font-primary text-3xl gap-20">
-            {rightBenefits.map((benefit) => (
-              <div key={benefit} className="w-full py-3 rounded-full text-center text-white font-medium border border-[#F3D58C] shadow-lg bg-gradient-to-r from-[#B56A10] via-[#E5B85A] to-[#B56A10] " >
-                {benefit}
-              </div>
+          {/* Right Column Benefits */}
+          <div className="flex flex-col gap-3 md:gap-8 lg:gap-20 2xl:gap-32 order-3">
+            {rightBenefits.map((benefit, index) => (
+              <BenefitBox
+                key={benefit}
+                benefit={benefit}
+                index={index}
+                side="right"
+              />
             ))}
           </div>
         </div>
