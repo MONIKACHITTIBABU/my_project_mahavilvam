@@ -15,6 +15,8 @@ import Plant3 from "../../../assets/images/LocationImages/AboutLocationImages/Pl
 import Plant4 from "../../../assets/images/LocationImages/AboutLocationImages/Plant4.png";
 import SlideCount from "../../../assets/images/LocationImages/AboutLocationImages/SlideCount.png";
 
+import FallingLeaves from "../../../components/FallingLeaves";
+
 const locations = [
   {
     title: "CHENNAI",
@@ -33,13 +35,17 @@ export default function LocationAbout() {
 
   return (
     <section className="relative py-6 md:py-10 overflow-hidden">
+      {/* Background Image */}
       <img
         src={ChennaiBg}
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover -z-10"
       />
 
-      <div className="container z-10">
+      {/* Falling Leaves Layer */}
+      <FallingLeaves count={12} />
+
+      <div className="container relative z-10">
         {locations.map((location, index) => (
           <div key={index} className="my-10">
 
