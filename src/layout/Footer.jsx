@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* Website */}
           <h3 className="text-center gold-gradient-text !font-primary subheading !text-6xl">
-            Mahavilvam@Aimhi
+            Mahavilvam@hi
           </h3>
 
         </div>

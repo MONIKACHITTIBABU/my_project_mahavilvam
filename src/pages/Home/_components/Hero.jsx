@@ -1,4 +1,5 @@
 import HeroBg from "../../../assets/images/HomePageImages/HeroImages/HeroBg.png";
+import HeroMobileBg from "../../../assets/images/HomePageImages/HeroImages/HeroMobileBg.png";
 import Design from "../../../assets/images/HomePageImages/HeroImages/Design.png";
 
 export default function Hero() {
@@ -6,9 +7,14 @@ export default function Hero() {
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
       <img
+        src={HeroMobileBg}
+        alt="Hero Background Mobile"
+        className="absolute inset-0 h-full w-full object-cover md:hidden"
+      />
+      <img
         src={HeroBg}
         alt="Hero Background"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover hidden md:block"
       />
 
       {/* Dark Overlay */}
@@ -29,14 +35,14 @@ export default function Hero() {
         <p className="subheading gradient-text mt-6">
           CHENNAI | VELLORE
         </p>
-        <h1 className="font-bebas mt-6 font-bold text-[#D9A329] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]">
+        <h1 className="font-bebas mt-16 md:mt-6font-bold text-[#D9A329] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]">
           DIVINE CALLING
         </h1>
         {/* Divine Calling Image */}
         <img
           src={Design}
           alt="Divine Calling"
-          className="mt-4 w-52 sm:w-72 md:w-80 lg:w-[349px] h-auto mx-auto object-contain"/>
+          className="mt-4 w-52 sm:w-72 md:w-80 lg:w-[349px] h-auto mx-auto object-contain" />
 
         <div className="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5">
           <h3 className="font-primary font-semibold uppercase gold-gradient-text text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl mt-8">

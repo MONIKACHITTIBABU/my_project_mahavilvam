@@ -1,5 +1,5 @@
 import CommonBg from "../../../assets/images/Common/CommonBg.png";
-import Plant from "../../../assets/images/HomePageImages/AboutImages/Plant.png";
+import AboutGif from "../../../assets/images/Gif/AboutGif.gif";
 import SideDesign from "../../../assets/images/HomePageImages/AboutImages/SideDesign.png";
 
 import ScrollReveal from "../../../components/ScrollReveal";
@@ -33,9 +33,9 @@ export default function About({
         {/* Left Plant */}
         <div className="w-full md:w-[40%] flex justify-center">
           <img
-            src={Plant}
+            src={AboutGif}
             alt="Mahavilvam Plant"
-            className="w-full lg:w-[80%] h-auto object-cover"
+            className="w-full lg:w-[80%] h-auto object-cover -translate-y-4 md:-translate-y-10 lg:-translate-y-36"
           />
         </div>
 
