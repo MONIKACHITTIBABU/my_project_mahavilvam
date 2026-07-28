@@ -1,50 +1,85 @@
 import HeroBg from "../../../assets/images/HomePageImages/HeroImages/HeroBg.png";
 import Design from "../../../assets/images/HomePageImages/HeroImages/Design.png";
+import Lakshmi from "../../../assets/images/HomePageImages/HeroImages/Lakshmi.gif";
+import Shivan from "../../../assets/images/HomePageImages/HeroImages/Shivan.gif";
+import Hanging from "../../../assets/images/HomePageImages/HeroImages/Hanging.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden">
       {/* Background Image */}
       <img
         src={HeroBg}
         alt="Hero Background"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
       />
+      {/* Hanging Decorations */}
+      <div className="absolute inset-0 w-full h-full flex justify-between items-start">
+        {/* Left Hanging */}
+        <img
+          src={Hanging}
+          alt="Left Hanging"
+          className="h-56 md:h-72 lg:h-80 xl:h-96 2xl:max-w-[35%] w-auto object-cover event-pointer-none "
+        />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+        {/* Right Hanging */}
+        <img
+          src={Hanging}
+          alt="Right Hanging"
+          className="h-56 md:h-72 lg:h-80 xl:h-96 2xl:max-w-[35%] rotate-y-180 w-auto object-cover event-pointer-none "
+        />
+      </div>
+
+      <div className="absolute inset-0 w-full h-full flex justify-between items-end">
+        {/* Lakshmi GIF */}
+        <img
+          src={Lakshmi}
+          alt="Lakshmi"
+          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-72 xl:max-w-96 2xl:max-w-[30%]"
+        />
+
+        {/* Shiva GIF */}
+        <img
+          src={Shivan}
+          alt="Shiva"
+          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-72 xl:max-w-96 2xl:max-w-[30%]"
+        />
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-5 sm:px-8 md:px-12 lg:px-16 text-center">
-        <h2
-          className="font-primary font-bold gradient-leaf text-[#D9A329] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]"
-        >
-          Mahavilvam
-        </h2>
+      <div className="container relative z-30 flex pt-30 pb-44 md:pb-3  flex-col items-center justify-center text-center">
+        <div className="">
+          {/* Mahavilvam */}
+          <h2 className="hero-heading-1 gradient-leaf">Mahavilvam</h2>
 
-        <h3 className="mt-2 font-primary font-semibold gradient-leaf text-[#D9A329] text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-          @AIM HI
-        </h3>
+          {/* AIM HI */}
+          <h3 className="hero-heading-2 gradient-leaf">@AIM HI</h3>
+        </div>
 
-        <p className="mt-3 font-secondary text-[#E8C875] tracking-[2px] sm:tracking-[4px] md:tracking-[5px] text-xs sm:text-sm md:text-base">
-          CHENNAI | VELLORE
-        </p>
-        <h1 className="font-bebas font-bold text-[#D9A329] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[104px]">
-          DIVINE CALLING
-        </h1>
-        {/* Divine Calling Image */}
+        <div className="flex flex-col gap-4 mt-5">
+          {/* Location */}
+          <p className="hero-heading-3 gold-gradient-text">CHENNAI | VELLORE</p>
+
+          {/* Divine Calling */}
+          <h1 className="hero-heading-4 gold-gradient-text">DIVINE CALLING</h1>
+        </div>
+
+        {/* Design */}
         <img
           src={Design}
           alt="Divine Calling"
-          className="mt-4 w-52 sm:w-72 md:w-80 lg:w-[349px] h-auto mx-auto object-contain"/>
+          className=" mt-2 w-full max-w-40 lg:max-w-80 2xl:max-w-96 h-auto object-cover
+    "
+        />
 
-        <div className="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5">
-          <h3 className="font-primary font-semibold uppercase gold-gradient-text text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl">
+        {/* Bottom Content */}
+        <div className="my-4 xl:my-10 flex flex-row items-center justify-center gap-4 md:gap-8 lg:gap-4">
+          <h3 className="font-primary font-semibold uppercase gold-gradient-text  text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-8xl">
             OWN YOUR
           </h3>
 
-          <div className="flex flex-col items-center justify-center gap-3">
-            <h1 className="font-primary gold-gradient-cc text-[#D9A329] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl pl-0 md:pl-4">
+          <div className="flex flex-col items-center">
+            <h1 className="font-primary font-semibold gold-gradient-cc text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl leading-tight">
               MAHAVILVAM
               <span className="block">PROSPERITY</span>
             </h1>
@@ -54,3 +89,5 @@ export default function Hero() {
     </section>
   );
 }
+
+//

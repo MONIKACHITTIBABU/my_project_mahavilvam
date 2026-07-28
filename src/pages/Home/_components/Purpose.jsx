@@ -1,6 +1,8 @@
-import PurposeBg from "../../../assets/images/HomePageImages/PurposeImages/PurposeBg.png";
+import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import VectorDesign from "../../../assets/images/HomePageImages/PurposeImages/VectorDesign.png";
+import ReusableSvg from "../../../components/ReusableSvg";
 import PurposeCard from "./PurposeCard";
+import FallingLeaves from "../../../components/FallingLeaves";
 
 export default function Purpose() {
   const purposeCards = [
@@ -25,25 +27,23 @@ export default function Purpose() {
 
   return (
     <section className="relative py-10 overflow-hidden">
+      {/* Background Image */}
       <img
-        src={PurposeBg}
+        src={CommonBg}
         alt=""
         className="absolute inset-0 -z-10 w-full h-full object-cover"
       />
 
-      <div className="container z-10">
+      {/* Falling Leaves Layer */}
+      <FallingLeaves count={12} />
+
+      <div className="container relative z-10">
         {/* Heading */}
-        <h1 className="text-center gradient-text text-7xl font-secondary font-semibold z-10">
-          THE PURPOSE
-        </h1>
-        <img
-          src={VectorDesign}
-          alt="Vector Design"
-          className="w-full max-w-[600px] my-8 mx-auto"
-        />
+        <h1 className="heading gradient-text">THE PURPOSE</h1>
+        <ReusableSvg />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 justify-center gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 justify-center leading-relaxed gap-8 md:gap-12">
           {purposeCards.map((card, index) => (
             <div key={index} className={card.offset ? "md:mt-20" : ""}>
               <PurposeCard type={card.type} items={card.items} />

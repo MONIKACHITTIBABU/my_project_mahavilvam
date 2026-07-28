@@ -16,7 +16,7 @@ export default function PurposeCard({ title, items, type, className }) {
         {items.map((item, index) => (
           <p
             key={index}
-            className="text-white text-2xl font-primary font-medium leading-10 text-center"
+            className="description !text-white my-3 !text-xl"
           >
             {item}
           </p>
@@ -24,7 +24,7 @@ export default function PurposeCard({ title, items, type, className }) {
       </div>
 
       {/* Bottom Label */}
-      <h3 className="text-[#E0B020] text-3xl gradient-text font-primary font-semibold mt-6">
+      <h3 className="text-3xl gradient-text font-primary font-semibold mt-6">
         {type}
       </h3>
     </div>
