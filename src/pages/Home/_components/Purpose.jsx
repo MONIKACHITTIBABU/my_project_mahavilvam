@@ -13,9 +13,9 @@ export default function Purpose() {
     {
       type: "Environmental",
       items: [
-        "Atmospheric Purification",
-        "High Oxygen Release",
         "Cooling - Energizing",
+        "High Oxygen Release",
+        "Atmospheric Purification",
       ],
       offset: true, // Move this card down
     },
@@ -26,15 +26,9 @@ export default function Purpose() {
   ];
 
   return (
-    <section className="relative py-10 overflow-hidden">
-      {/* Background Image */}
-      <img
-        src={CommonBg}
-        alt=""
-        className="absolute inset-0 -z-10 w-full h-full object-cover"
-      />
+    <section className="relative py-6 md:py-10 overflow-hidden">
 
-      {/* Falling Leaves Layer */}
+      <img src={CommonBg} alt="" className="absolute inset-0 w-full h-full object-cover -z-10" />
       <FallingLeaves count={12} />
 
       <div className="container relative z-10">
@@ -43,7 +37,7 @@ export default function Purpose() {
         <ReusableSvg />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 justify-center leading-relaxed gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 max-w-7xl mx-auto justify-center gap-8 md:gap-12mt-10 md:mt-16">
           {purposeCards.map((card, index) => (
             <div key={index} className={card.offset ? "md:mt-20" : ""}>
               <PurposeCard type={card.type} items={card.items} />

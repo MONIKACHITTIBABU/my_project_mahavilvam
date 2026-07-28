@@ -5,7 +5,7 @@ export default function PurposeCard({ title, items, type, className }) {
     <div className={`flex flex-col items-center ${className}`}>
       {/* Card */}
       <div
-        className="w-full min-h-[320px] max-w-[350px] relative flex flex-col justify-center items-center px-10 pt-12 pb-8"
+        className="w-full min-h-80 md:min-h-96 lg:min-h-75  max-w-[350px] md:min-w-110 lg:min-w-auto relative flex flex-col justify-center items-center"
       >
         <img
           src={PruposeCard}
@@ -16,7 +16,7 @@ export default function PurposeCard({ title, items, type, className }) {
         {items.map((item, index) => (
           <p
             key={index}
-            className="description !text-white my-3 !text-xl"
+            className="text-2xl md:text-3xl lg:text-2xl text-center text-white my-2 md:my-3"
           >
             {item}
           </p>

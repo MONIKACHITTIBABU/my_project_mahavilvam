@@ -76,10 +76,10 @@
 
 .description
 {
-  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl
+  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl
          leading-6 sm:leading-7 md:leading-8 lg:leading-9
          text-yellow-secondary
-         max-w-2xl mx-auto lg:mx-0;
+          mx-auto lg:mx-0;
 }
 /* Word-by-word reveal sharp rendering fix */
 .description .word {
@@ -159,19 +159,48 @@
 
 
 /* Home Page Hero Section Styles */
-
+/* Mahavilvam */
 .hero-heading-1 {
   @apply font-primary font-bold text-5xl md:text-8xl xl:text-[8rem] 2xl:text-[10rem]
 }
-
+/* AIM HI */
 .hero-heading-2 {
   @apply font-primary font-bold text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl opacity-70
 }
-
+/* CHENNAI | VELLORE */
 .hero-heading-3 {
-  @apply font-secondary text-2xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl opacity-90
+  @apply font-secondary text-2xl md:text-3xl xl:text-3xl 2xl:text-6xl opacity-90
+}
+/* DIVINE CALLING */
+.hero-heading-4 {
+  @apply font-bebasneue font-bold text-4xl md:text-6xl xl:text-[5rem] 2xl:text-[6rem]
+}
+/* OWN YOUR */
+.hero-heading-5 {
+  @apply font-primary font-bold uppercase text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-7xl
+}
+/* MAHAVILVAM PROSPERITY */
+.hero-heading-6 {
+  @apply font-primary font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight
 }
 
-.hero-heading-4 {
-  @apply font-bebasneue font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[6.5rem] w-fit
+/* About Description Text Size */
+.about-description {
+  @apply font-primary text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl
+}
+
+/* Benefit Box Text Size */
+.benefit-box-text {
+  @apply font-primary text-white font-bold text-sm lg:text-xl xl:text-2xl 2xl:text-4xl text-center
+}
+
+/* Location Card Text Size */
+.location-card-text {
+  @apply font-secondary text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold
+}
+
+
+/* Footer Text Size */
+.footer-heading {
+  @apply font-primary font-bold uppercase tracking-wider text-[#D9A329] text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl
 }

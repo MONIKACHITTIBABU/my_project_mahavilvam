@@ -23,7 +23,7 @@ const ReusableSvg = () => {
             y2="40.6921"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F3D275" />
+            <stop stopColor="#F3D275" />
             <stop offset="1" stop-color="#9E7424" />
           </linearGradient>
         </defs>

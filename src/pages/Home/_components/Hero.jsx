@@ -35,14 +35,14 @@ export default function Hero() {
         <img
           src={Lakshmi}
           alt="Lakshmi"
-          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-72 xl:max-w-96 2xl:max-w-[30%]"
+          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-52 xl:max-w-96"
         />
 
         {/* Shiva GIF */}
         <img
           src={Shivan}
           alt="Shiva"
-          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-72 xl:max-w-96 2xl:max-w-[30%]"
+          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-52 xl:max-w-96"
         />
       </div>
 
@@ -68,20 +68,19 @@ export default function Hero() {
         <img
           src={Design}
           alt="Divine Calling"
-          className=" mt-2 w-full max-w-40 lg:max-w-80 2xl:max-w-96 h-auto object-cover
-    "
+          className="mt-2 w-full max-w-40 md:max-w-52 lg:max-w-60 2xl:max-w-96 h-auto object-cover"
         />
 
         {/* Bottom Content */}
-        <div className="my-4 xl:my-10 flex flex-row items-center justify-center gap-4 md:gap-8 lg:gap-4">
-          <h3 className="font-primary font-semibold uppercase gold-gradient-text  text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-8xl">
+        <div className="my-4 xl:my-10 flex flex-row items-center justify-center gap-4">
+          <h3 className="hero-heading-5 gold-gradient-text">
             OWN YOUR
           </h3>
 
           <div className="flex flex-col items-center">
-            <h1 className="font-primary font-semibold gold-gradient-cc text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl leading-tight">
+            <h1 className="hero-heading-6 gold-gradient-cc">
               MAHAVILVAM
-              <span className="block">PROSPERITY</span>
+              <span className="block gold-gradient-cc">PROSPERITY</span>
             </h1>
           </div>
         </div>
@@ -89,5 +88,3 @@ export default function Hero() {
     </section>
   );
 }
-
-//

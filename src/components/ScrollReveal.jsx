@@ -83,7 +83,7 @@ const ScrollReveal = ({
           end: "bottom 80%",   // Completes when bottom hits 35% viewport height
           scrub: 0.1,         // Smooth tight snapping tied to scroll movement
           invalidateOnRefresh: true,
-          markers: true,
+          // markers: true,
         },
       });
 
