@@ -15,7 +15,7 @@ export default function Footer() {
       />
       <FallingLeaves count={12} />
 
-      <div className="relative w-full max-w-[90%] mx-auto xl:max-w-7xl z-10 border-2 border-[#D9A329] rounded-2xl bg-black p-3 md:p-4 lg:p-10 text-center">
+      <div className="relative w-full max-w-[90%] mx-auto lg:max-w-3xl xl:max-w-[90%] 2xl:max-w-[70%] z-10 border-2 border-[#D9A329] rounded-2xl bg-black p-3 md:p-4 lg:p-10 text-center">
         <div className="flex flex-col items-center justify-center w-full">
           {/* Top icons — desktop only */}
           <div className="hidden md:flex items-center justify-between w-full mb-3 md:mb-0">
