@@ -20,7 +20,7 @@ export default function Home() {
         />
 
         {/* Falling Leaves Layer */}
-        <FallingLeaves count={8} />
+        <FallingLeaves count={24} minDuration={14} maxDuration={26} />
 
         <About
           description="AIM HI  a unit of SGL is one of the leading landscape company in chennai with 28 years of expertise servicing diverse clientele having executed large scale spiritual park in Vellore and Tirupati"

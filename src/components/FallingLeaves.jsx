@@ -1,35 +1,36 @@
 import { useMemo } from "react";
 import leafImage from "../assets/images/Common/leaf.png"; // Adjust path to your leaf image
 
-const FallingLeaves = ({ count = 16 }) => {
+const FallingLeaves = ({
+  count = 16,
+  minDuration = 12,
+  maxDuration = 22,
+}) => {
   const leaves = useMemo(() => {
-    // Width of each grid column for 12 leaves (~8.33% per leaf lane)
     const laneWidth = 100 / count;
 
     return Array.from({ length: count }).map((_, i) => {
-      // Calculate a randomized left offset strictly within its assigned lane
-      // Example: Leaf 0 is between 0% - 8.3%, Leaf 1 is between 8.3% - 16.6%, etc.
       const laneStart = i * laneWidth;
-      const randomOffset = Math.random() * (laneWidth - 2); // Avoid edge overflow
+      const randomOffset = Math.random() * (laneWidth - 2);
       const left = laneStart + randomOffset;
 
-      // Random fall speed (3s to 5.5s)
-      const duration = 3 + Math.random() * 2.5;
+      const duration =
+        minDuration + Math.random() * (maxDuration - minDuration);
 
-      // Staggered delays so they don't fall in a line
-      const delay = Math.random() * 5;
+      // Negative delay starts each leaf mid-fall so none cluster at the top on load
+      const progress = Math.random();
+      const delay = -(progress * duration);
 
-      // Random sizes (25px to 50px)
-      const size = 20 + Math.random() * 20;
+      const size = 28 + Math.random() * 24;
 
-      // Random starting vertical positions (some start slightly higher/lower off-screen)
       const startY = -(40 + Math.random() * 60);
 
       return {
         id: i,
         style: {
           left: `${left}%`,
-          top: `${startY}px`,
+          top: startY,
+          "--start-y": `${startY}px`,
           width: `${size}px`,
           height: `${size}px`,
           backgroundImage: `url(${leafImage})`,
@@ -38,7 +39,7 @@ const FallingLeaves = ({ count = 16 }) => {
         },
       };
     });
-  }, [count]);
+  }, [count, minDuration, maxDuration]);
 
   return (
     <div className="falling-leaves-container">
