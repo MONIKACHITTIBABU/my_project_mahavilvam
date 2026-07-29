@@ -6,14 +6,17 @@ import { Icon } from "@iconify/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import ChennaiBg from "../../../assets/images/LocationImages/AboutLocationImages/ChennaiBg.png";
+import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import SlideCount from "../../../assets/images/LocationImages/AboutLocationImages/SlideCount.png";
 
 import Plant1 from "../../../assets/images/LocationImages/AboutLocationImages/Plant1.png";
 import Plant2 from "../../../assets/images/LocationImages/AboutLocationImages/Plant2.png";
 import Plant3 from "../../../assets/images/LocationImages/AboutLocationImages/Plant3.png";
 import Plant4 from "../../../assets/images/LocationImages/AboutLocationImages/Plant4.png";
-
+import Plant5 from "../../../assets/images/LocationImages/AboutLocationImages/Plant5.png";
+import Plant6 from "../../../assets/images/LocationImages/AboutLocationImages/Plant6.png";
+import Plant7 from "../../../assets/images/LocationImages/AboutLocationImages/Plant7.png";
+import Plant8 from "../../../assets/images/LocationImages/AboutLocationImages/Plant8.png";
 import FallingLeaves from "../../../components/FallingLeaves";
 import ReusableSvg from "../../../components/ReusableSvg";
 
@@ -26,7 +29,7 @@ const locations = [
   {
     title: "VELLORE",
     subtitle: "Nearly 2 acres in Vellore",
-    images: [Plant4, Plant3, Plant2, Plant1],
+    images: [Plant6, Plant5, Plant7, Plant8],
   },
 ];
 
@@ -61,7 +64,7 @@ export default function LocationAbout() {
   return (
     <section className="relative py-6 md:py-10 overflow-hidden">
       <img
-        src={ChennaiBg}
+        src={CommonBg}
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover -z-10"
       />
@@ -74,13 +77,13 @@ export default function LocationAbout() {
           <div key={index} className="my-10">
 
             {/* Heading */}
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col  items-center text-center">
               <h2 className="heading text-yellow-primary">
                 {location.title}
               </h2>
-
+            <div className="w-60 xl:w-120 md:w-90">
               <ReusableSvg />
-
+            </div>
               <p className="mt-4 md:mt-6 description text-yellow-secondary">
                 {location.subtitle}
               </p>
@@ -132,11 +135,11 @@ export default function LocationAbout() {
               >
                 {location.images.map((img, i) => (
                   <SwiperSlide key={i}>
-                    <div className="overflow-hidden rounded-[24px] border border-yellow-secondary">
+                    <div className="overflow-hidden rounded-[24px] border border-yellow-secondary bg-[#031312]">
                       <img
                         src={img}
                         alt={`${location.title}-${i}`}
-                        className="w-full h-[320px] object-cover transition-transform duration-300 hover:scale-105"
+                        className="w-full h-[450px] object-contain transition-transform duration-300 hover:scale-105"
                       />
                     </div>
                   </SwiperSlide>

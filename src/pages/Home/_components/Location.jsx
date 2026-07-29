@@ -2,20 +2,14 @@ import ChennaiImage from "../../../assets/images/HomePageImages/LocationImages/C
 import VelloreImage from "../../../assets/images/HomePageImages/LocationImages/VelloreImage.jpg";
 import ChennaiVideo from "../../../assets/images/HomePageImages/LocationImages/ChennaiVideo.mp4";
 import VelloreVideo from "../../../assets/images/HomePageImages/LocationImages/VelloreVideo.mp4";
-import CommonBg from "../../../assets/images/Common/CommonBg.png";
 import SideDesign from "../../../assets/images/HomePageImages/LocationImages/SideDesign.png";
-import FallingLeaves from "../../../components/FallingLeaves";
 import LocationCard from "./LocationCard";
 
 export default function LocationsSection() {
   return (
     <section
-      className="relative w-full py-6 md:py-10 overflow-hidden"
+      className="relative w-full py-6 md:py-10 xl:py-15 overflow-hidden"
     >
-
-      <img src={CommonBg} alt="" className="absolute inset-0 w-full h-full object-cover -z-10" />
-      <FallingLeaves count={8} />
-
       <div className="container relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 xl:gap-12 px-4">
         <LocationCard
           title="CHENNAI"
