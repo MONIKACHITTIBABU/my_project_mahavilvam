@@ -21,7 +21,7 @@ const locations = [
   {
     title: "CHENNAI",
     subtitle: "Nursery - 10,000 sft at Chennai",
-    images: [Plant1, Plant2, Plant3, Plant4, Plant1, Plant2, Plant3, Plant4],
+    images: [Plant1, Plant2, Plant3, Plant4],
   },
   {
     title: "VELLORE",
