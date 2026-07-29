@@ -9,7 +9,7 @@ export default function Varieties() {
     <>
         <ReusableHeroSection title1="Varieties of" title2="Mahavilvam" />
         <AboutSection/>
-        <Footer/>
+        {/* <Footer/> */}
     </>
   )
 }
