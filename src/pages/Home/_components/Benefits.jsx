@@ -160,7 +160,7 @@ export default function Benefits() {
     >
 
       <img src={CommonBg} alt="Common Background" className="absolute inset-0 w-full h-full object-cover" />
-      <FallingLeaves count={12} />
+      <FallingLeaves count={8} />
 
       <div className="container relative z-10">
         {/* Heading */}

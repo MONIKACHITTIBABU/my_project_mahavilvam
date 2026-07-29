@@ -20,7 +20,7 @@ const FallingLeaves = ({ count = 16 }) => {
       const delay = Math.random() * 5;
 
       // Random sizes (25px to 50px)
-      const size = 25 + Math.random() * 25;
+      const size = 20 + Math.random() * 20;
 
       // Random starting vertical positions (some start slightly higher/lower off-screen)
       const startY = -(40 + Math.random() * 60);

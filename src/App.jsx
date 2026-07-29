@@ -6,11 +6,14 @@ import LocationPage from "./pages/locationPage/LocationPage.jsx";
 import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import Header from "./layout/Header.jsx";
 import Footer from "./layout/Footer.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 export default function App() {
+
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/locations" element={<LocationPage />} />
