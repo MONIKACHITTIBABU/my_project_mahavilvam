@@ -1,8 +1,10 @@
 import HeroBg from "../../../assets/images/HomePageImages/HeroImages/HeroBg.png";
 import Design from "../../../assets/images/HomePageImages/HeroImages/Design.png";
-import Lakshmi from "../../../assets/images/HomePageImages/HeroImages/Lakshmi.gif";
-import Shivan from "../../../assets/images/HomePageImages/HeroImages/Shivan.gif";
+import LakshmiDesktop from "../../../assets/images/HomePageImages/HeroImages/LakshmiDesktop.png";
+import ShivaDesktop from "../../../assets/images/HomePageImages/HeroImages/ShivanDesktop.png";
 import Hanging from "../../../assets/images/HomePageImages/HeroImages/Hanging.png";
+import LakshmiMobile from "../../../assets/images/HomePageImages/HeroImages/LakshmiMobile.png";
+import ShivaMobile from "../../../assets/images/HomePageImages/HeroImages/ShivaMobile.png";
 
 export default function Hero() {
   return (
@@ -32,22 +34,31 @@ export default function Hero() {
 
       <div className="absolute inset-0 w-full h-full flex justify-between items-end">
         {/* Lakshmi GIF */}
-        <img
-          src={Lakshmi}
-          alt="Lakshmi"
-          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-52 xl:max-w-96"
-        />
+        <picture>
+          <source media="(min-width: 1024px)" srcSet={LakshmiDesktop} />
+          <source media="(max-width: 767px)" srcSet={LakshmiMobile} />
+
+          <img
+            src={LakshmiDesktop}
+            alt="Lakshmi"
+            className="-mb-4 z-10 pointer-events-none select-none object-cover w-full md:max-w-52 lg:max-w-70 xl:max-w-96"
+          />
+        </picture>
 
         {/* Shiva GIF */}
-        <img
-          src={Shivan}
-          alt="Shiva"
-          className="z-10 pointer-events-none select-none object-cover w-full max-w-48 md:max-w-52 xl:max-w-96"
-        />
+        <picture>
+          <source media="(min-width: 1024px)" srcSet={ShivaDesktop} />
+          <source media="(max-width: 767px)" srcSet={ShivaMobile} />
+          <img
+            src={ShivaDesktop}
+            alt="Shiva"
+            className="z-10 pointer-events-none select-none object-cover w-full md:max-w-52 lg:max-w-70 xl:max-w-96"
+          />
+        </picture>
       </div>
 
       {/* Content */}
-      <div className="container relative z-30 flex md:mt-20 md:pb-3 flex-col items-center justify-center text-center">
+      <div className="container relative z-30 flex mt-10 md:mt-20 md:pb-3 flex-col items-center justify-center text-center">
         <div className="">
           {/* Mahavilvam */}
           <h2 className="hero-heading-1 gradient-leaf">Mahavilvam</h2>
@@ -73,9 +84,7 @@ export default function Hero() {
 
         {/* Bottom Content */}
         <div className="my-4 xl:my-10 flex flex-row items-center justify-center gap-4">
-          <h3 className="hero-heading-5 gold-gradient-text">
-            OWN YOUR
-          </h3>
+          <h3 className="hero-heading-5 gold-gradient-text">OWN YOUR</h3>
 
           <div className="flex flex-col items-center">
             <h1 className="hero-heading-6 gold-gradient-cc">
