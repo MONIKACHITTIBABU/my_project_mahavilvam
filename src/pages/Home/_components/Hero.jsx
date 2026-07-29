@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-30 flex md:pb-3 flex-col items-center justify-center text-center">
+      <div className="container relative z-30 flex md:mt-20 md:pb-3 flex-col items-center justify-center text-center">
         <div className="">
           {/* Mahavilvam */}
           <h2 className="hero-heading-1 gradient-leaf">Mahavilvam</h2>
