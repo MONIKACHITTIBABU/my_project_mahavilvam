@@ -14,7 +14,7 @@ export default function LocationsSection() {
     >
 
       <img src={CommonBg} alt="" className="absolute inset-0 w-full h-full object-cover -z-10" />
-      <FallingLeaves count={12} />
+      <FallingLeaves count={8} />
 
       <div className="container relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 xl:gap-12 px-4">
         <LocationCard

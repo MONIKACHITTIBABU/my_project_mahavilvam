@@ -66,7 +66,8 @@ export default function LocationAbout() {
         className="absolute inset-0 w-full h-full object-cover -z-10"
       />
 
-      <FallingLeaves count={12} />
+      {/* Falling Leaves Layer */}
+      <FallingLeaves count={8} />
 
       <div className="container relative z-10">
         {locations.map((location, index) => (

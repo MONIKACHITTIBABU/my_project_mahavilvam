@@ -74,8 +74,11 @@
   @apply font-secondary uppercase text-center leading-tight text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl;
 }
 
-.description {
-  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl leading-6 sm:leading-7 md:leading-8 lg:leading-9 text-yellow-secondary mx-auto lg:mx-0;
+.description
+{
+  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-4xl leading-snug
+         text-yellow-secondary
+          mx-auto lg:mx-0;
 }
 
 /* Word-by-word reveal sharp rendering fix */
@@ -121,16 +124,14 @@
   z-index: 1;
 }
 
-/* Base Leaf Style */
 .falling-leaf {
   position: absolute;
-  top: -60px;
-  /* Start slightly above the section */
+  width: clamp(18px, 2vw, 42px);
+  height: clamp(18px, 2vw, 42px);
+  transform: scale(var(--leaf-scale));
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  will-change: transform, opacity;
-  animation: fallAndSway linear infinite;
 }
 
 /* Falling + Swaying Keyframes */
@@ -180,12 +181,12 @@
 
 /* DIVINE CALLING */
 .hero-heading-4 {
-  @apply font-bebasneue font-bold text-4xl md:text-6xl xl:text-[5rem] 2xl:text-[6rem]
+  @apply font-primary font-bold text-4xl md:text-6xl xl:text-[6rem] 2xl:text-[6rem]
 }
 
 /* OWN YOUR */
 .hero-heading-5 {
-  @apply font-primary font-bold uppercase text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-7xl
+  @apply font-primary font-bold uppercase text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
 }
 
 /* MAHAVILVAM PROSPERITY */

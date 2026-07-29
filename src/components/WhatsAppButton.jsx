@@ -20,8 +20,7 @@ export default function WhatsAppButton() {
         className="
           relative
           flex items-center justify-center
-          w-20 h-20
-          md:w-28 md:h-28
+          size-24
         "
       >
         {/* Rotating Text */}
@@ -35,18 +34,15 @@ export default function WhatsAppButton() {
             </defs>
 
             <text
-              className="
-                text-[10px]
-                sm:text-[12px]
-                md:text-[14px]
-              "
+              className="text-sm md:text-base"
               fontWeight="600"
-              letterSpacing="3"
+              letterSpacing="4.5"
+              textAnchor="middle"
             >
-              <textPath href="#callCircle">
-                <tspan fill="#ffffff">BOOK YOUR . </tspan>
-                <tspan fill="#FFA500">DIVINE PLANT </tspan>
-                <tspan fill="#ffffff">.</tspan> 
+              <textPath href="#callCircle" startOffset="50%">
+                <tspan fill="#ffffff">BOOK YOUR </tspan>
+                <tspan fill="#FFA500"> DIVINE PLANT</tspan>
+                {/* <tspan fill="#ffffff">.</tspan> */}
               </textPath>
             </text>
           </svg>
@@ -60,15 +56,13 @@ export default function WhatsAppButton() {
             flex items-center justify-center
             shadow-xl
             z-10
-
-           p-1.5
-md:p-2
+            p-3
           "
         >
           <FaWhatsapp
             className="
               text-white
-              text-xl
+              size-6
               sm:text-2xl
               md:text-3xl
             "
