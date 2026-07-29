@@ -14,6 +14,7 @@ export default function AboutSection() {
       title: "PANCHAMUKI BELPATRA",
       image: VarietiesPlant1,
       imageLeft: true,
+      imageClass: "max-w-32 md:max-w-36 lg:max-w-45 xl:max-w-56 2xl:max-w-100",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     },
@@ -21,6 +22,7 @@ export default function AboutSection() {
       title: "TRAYODASHA-PATRA",
       image: VarietiesPlant2,
       imageLeft: false,
+      imageClass: "max-w-35 md:max-w-40 lg:max-w-50 xl:max-w-62 2xl:max-w-115",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     },
@@ -28,6 +30,7 @@ export default function AboutSection() {
       title: "TRIPATRA",
       image: VarietiesPlant3,
       imageLeft: true,
+      imageClass: "max-w-35 md:max-w-40 lg:max-w-50 xl:max-w-62 2xl:max-w-115",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
     },
@@ -52,23 +55,22 @@ export default function AboutSection() {
             <ReusableSvg />
           </div>
 
-          {/* Single Responsive Layout */}
+          {/* Content */}
           <div
-            className={`container relative z-20 flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-10 ${
-              item.imageLeft ? "" : "md:flex-row-reverse"
-            }`}
+            className={`container !max-w-7xl mx-auto relative z-20 flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-10 ${item.imageLeft ? "" : "md:flex-row-reverse"
+              }`}
           >
             {/* Image */}
-            <div className="w-full md:w-[40%] flex justify-center">
+            <div className="w-full md:w-[40%] xl:w-[30%] flex justify-center">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full max-w-50 lg:max-w-60 xl:max-w-70 2xl:max-w-100 h-auto object-contain"
+                className={`w-full ${item.imageClass} h-auto object-contain`}
               />
             </div>
 
             {/* Description */}
-            <div className="w-full md:w-[60%]">
+            <div className="w-full md:w-[60%] xl:w-[70%]">
               <ScrollReveal
                 delay={0}
                 duration={0.5}

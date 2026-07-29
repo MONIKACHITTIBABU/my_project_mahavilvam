@@ -50,8 +50,8 @@ export default function About({
             </ScrollReveal>
 
             {/* Bottom Ornamental Vector (Width Slightly Increased) */}
-            <div className="w-full flex justify-center">
-              <div className="w-70 md:w-80 lg:w-108">
+            <div className="w-full mt-3 flex justify-start">
+              <div className="w-77 md:w-90 lg:w-150">
                 <ReusableSvg />
               </div>
             </div>

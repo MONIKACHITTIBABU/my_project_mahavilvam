@@ -74,11 +74,8 @@
   @apply font-secondary uppercase text-center leading-tight text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl;
 }
 
-.description
-{
-  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-4xl leading-snug
-         text-yellow-secondary
-          mx-auto lg:mx-0;
+.description {
+  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-4xl leading-snug text-yellow-secondary mx-auto lg:mx-0;
 }
 
 /* Word-by-word reveal sharp rendering fix */
@@ -130,6 +127,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  will-change: transform, opacity;
+  animation: fallAndSway linear infinite;
 }
 
 /* Falling + Swaying Keyframes */
@@ -208,17 +207,18 @@
 }
 
 
+
 /* Footer Text Size */
 .footer-heading {
-  @apply font-primary font-bold uppercase tracking-wider text-[#D9A329] text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl
+  @apply font-primary font-bold uppercase tracking-wider text-[#D9A329] text-center text-sm md:text-3xl xl:text-5xl 2xl:text-7xl
 }
 
 .footer-phone-number {
-  @apply font-primary font-black tracking-normal text-white text-3xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap
+  @apply font-primary font-black tracking-normal text-white text-2xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap
 }
 
 .footer-email {
-  @apply font-primary font-medium tracking-wider text-[#D9A329] text-2xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap
+  @apply font-primary font-medium tracking-wider text-[#D9A329] text-xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap
 }
 
 
