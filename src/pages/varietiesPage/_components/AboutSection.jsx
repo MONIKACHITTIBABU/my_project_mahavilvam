@@ -74,7 +74,7 @@ export default function AboutSection() {
               <ScrollReveal
                 delay={0}
                 duration={0.5}
-                textClassName="description text-center md:text-left"
+                textClassName={`description text-center ${item.imageLeft === true ? "md:text-left" : "md:text-right"}`}
               >
                 {item.description}
               </ScrollReveal>
