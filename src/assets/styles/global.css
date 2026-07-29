@@ -29,7 +29,7 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(to bottom,#FFDE37 0%, #FFA500 100%);
+    background: linear-gradient(to bottom, #FFDE37 0%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -76,11 +76,11 @@
 
 .description
 {
-  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl
-         leading-6 sm:leading-7 md:leading-8 lg:leading-9
+  @apply font-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-4xl leading-snug
          text-yellow-secondary
           mx-auto lg:mx-0;
 }
+
 /* Word-by-word reveal sharp rendering fix */
 .description .word {
   display: inline-block;
@@ -92,8 +92,7 @@
   will-change: opacity;
 }
 
-.subheading
-{
+.subheading {
   @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-5xl font-semibold leading-tight
 }
 
@@ -118,20 +117,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Prevents leaves from blocking clicks */
-  overflow: hidden;    /* Leaf animation ends right at section boundary */
+  pointer-events: none;
+  /* Prevents leaves from blocking clicks */
+  overflow: hidden;
+  /* Leaf animation ends right at section boundary */
   z-index: 1;
 }
 
-/* Base Leaf Style */
 .falling-leaf {
   position: absolute;
-  top: -60px; /* Start slightly above the section */
+  width: clamp(18px, 2vw, 42px);
+  height: clamp(18px, 2vw, 42px);
+  transform: scale(var(--leaf-scale));
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  will-change: transform, opacity;
-  animation: fallAndSway linear infinite;
 }
 
 /* Falling + Swaying Keyframes */
@@ -140,18 +140,23 @@
     transform: translateY(0) translateX(0) rotate(0deg);
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   50% {
     transform: translateY(50vh) translateX(30px) rotate(180deg);
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(105vh) translateX(-20px) rotate(360deg);
-    opacity: 0; /* Fade out as it leaves the bottom of the section */
+    opacity: 0;
+    /* Fade out as it leaves the bottom of the section */
   }
 }
 
@@ -163,22 +168,27 @@
 .hero-heading-1 {
   @apply font-primary font-bold text-5xl md:text-8xl xl:text-[8rem] 2xl:text-[10rem]
 }
+
 /* AIM HI */
 .hero-heading-2 {
   @apply font-primary font-bold text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl opacity-70
 }
+
 /* CHENNAI | VELLORE */
 .hero-heading-3 {
   @apply font-secondary text-2xl md:text-3xl xl:text-3xl 2xl:text-6xl opacity-90
 }
+
 /* DIVINE CALLING */
 .hero-heading-4 {
-  @apply font-bebasneue font-bold text-4xl md:text-6xl xl:text-[5rem] 2xl:text-[6rem]
+  @apply font-primary font-bold text-4xl md:text-6xl xl:text-[6rem] 2xl:text-[6rem]
 }
+
 /* OWN YOUR */
 .hero-heading-5 {
-  @apply font-primary font-bold uppercase text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-7xl
+  @apply font-primary font-bold uppercase text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
 }
+
 /* MAHAVILVAM PROSPERITY */
 .hero-heading-6 {
   @apply font-primary font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight
@@ -202,7 +212,7 @@
 
 /* Footer Text Size */
 .footer-heading {
-  @apply font-primary font-bold uppercase tracking-wider text-[#D9A329] text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl
+  @apply font-primary font-bold uppercase tracking-wider text-[#D9A329] text-center text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl
 }
 
 .footer-phone-number {
@@ -211,4 +221,14 @@
 
 .footer-email {
   @apply font-primary font-medium tracking-wider text-[#D9A329] text-2xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap
+}
+
+
+/* Location and Varieties Reusable Hero section Text Size */
+.reusable-hero-heading {
+  @apply font-primary font-bold uppercase leading-none text-[24px] sm:text-[34px] md:text-[44px] lg:text-[64px] xl:text-[84px] 2xl:text-[100px];
+}
+
+.reusable-hero-bg-heading {
+  @apply font-primary text-center font-bold uppercase opacity-20 leading-none text-[48px] sm:text-[64px] md:text-[84px] lg:text-[120px] xl:text-[150px] 2xl:text-[170px];
 }

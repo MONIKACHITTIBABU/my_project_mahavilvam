@@ -29,7 +29,7 @@ export default function Purpose() {
     <section className="relative py-6 md:py-10 overflow-hidden">
 
       <img src={CommonBg} alt="" className="absolute inset-0 w-full h-full object-cover -z-10" />
-      <FallingLeaves count={12} />
+      <FallingLeaves count={8} />
 
       <div className="container relative z-10">
         {/* Heading */}

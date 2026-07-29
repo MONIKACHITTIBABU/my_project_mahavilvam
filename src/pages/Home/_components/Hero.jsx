@@ -6,7 +6,7 @@ import Hanging from "../../../assets/images/HomePageImages/HeroImages/Hanging.pn
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full min-h-[calc(100vh-8vh)] md:min-h-auto flex item-center overflow-hidden">
       {/* Background Image */}
       <img
         src={HeroBg}
@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-30 flex pt-30 pb-44 md:pb-3  flex-col items-center justify-center text-center">
+      <div className="container relative z-30 flex md:mt-20 md:pb-3 flex-col items-center justify-center text-center">
         <div className="">
           {/* Mahavilvam */}
           <h2 className="hero-heading-1 gradient-leaf">Mahavilvam</h2>
