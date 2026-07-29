@@ -24,7 +24,7 @@ export default function About({
       />
 
       {/* Falling Leaves Layer */}
-      <FallingLeaves count={12} />
+      <FallingLeaves count={8} />
 
       {/* Main Content Container */}
       <div className="container relative z-20 flex flex-col md:flex-row items-center justify-between md:gap-8 lg:gap-12 xl:gap-20">

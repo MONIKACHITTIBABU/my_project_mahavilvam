@@ -43,7 +43,7 @@ export default function LocationAbout() {
       />
 
       {/* Falling Leaves Layer */}
-      <FallingLeaves count={12} />
+      <FallingLeaves count={8} />
 
       <div className="container relative z-10">
         {locations.map((location, index) => (
