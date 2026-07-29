@@ -2,7 +2,7 @@ export default function LocationCard({ title, image, video, imageAlt }) {
   return (
     <div className="w-full lg:max-w-[500px] xl:max-w-[520px] rounded-3xl border-2 border-[#C89B3C] bg-black overflow-hidden flex flex-col">
       {/* Title: bottom on mobile, top on desktop */}
-      <div className="order-last md:order-first py-6 flex items-center justify-center">
+      <div className="order-first py-6 flex items-center justify-center">
         <h2 className="location-card-text gold-gradient-text">
           {title}
         </h2>

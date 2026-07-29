@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
         className="
           relative
           flex items-center justify-center
-          size-24
+          size-24 lg:size-28
         "
       >
         {/* Rotating Text */}
@@ -36,7 +36,14 @@ export default function WhatsAppButton() {
             <text
               className="text-sm md:text-base"
               fontWeight="600"
-              letterSpacing="4.5"
+              letterSpacing={
+                window.innerWidth < 640 ? "4.5" // Mobile
+                    : window.innerWidth < 1024
+                      ? "3.9" // Tablet
+                      : window.innerWidth < 1280
+                        ? "3.7" // Desktop
+                        : "3.5" // Large Desktop / TV
+              }
               textAnchor="middle"
             >
               <textPath href="#callCircle" startOffset="50%">
