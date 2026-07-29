@@ -218,7 +218,7 @@
 .footer-phone-number {
   @apply font-primary font-black tracking-normal text-white text-3xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap
 }
-
+ 
 .footer-email {
   @apply font-primary font-medium tracking-wider text-[#D9A329] text-2xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap
 }
