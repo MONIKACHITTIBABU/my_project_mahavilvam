@@ -29,7 +29,7 @@ const locations = [
   {
     title: "VELLORE",
     subtitle: "Nearly 2 acres in Vellore",
-    images: [Plant6, Plant5, Plant7, Plant8],
+    images: [Plant5, Plant6, Plant7, Plant8],
   },
 ];
 
