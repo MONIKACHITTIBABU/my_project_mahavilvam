@@ -23,7 +23,7 @@ export default function Footer() {
               <Icon icon="gg:phone" className="text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl" />
             </div>
 
-            <h3 className="footer-heading">
+            <h3 className="footer-heading gradient-text ">
               BOOK YOUR DIVINE PLANT TODAY!
             </h3>
 
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           {/* Headline — mobile only */}
-          <h3 className="md:hidden footer-heading ">
+          <h3 className="md:hidden footer-heading gradient-text ">
             BOOK YOUR DIVINE PLANT TODAY!
           </h3>
 
@@ -47,7 +47,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <span className="footer-email md:mt-1">
+          <span className="footer-email md:mt-1 gold-gradient-text">
             Mahavilvam@AIM HI
           </span>
         </div>

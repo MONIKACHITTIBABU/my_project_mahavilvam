@@ -46,6 +46,7 @@
     color: transparent;
   }
 
+
   .gold-gradient-text {
     background: linear-gradient(to top,
         #E5A334 0%,
@@ -212,7 +213,7 @@
 
 /* Footer Text Size */
 .footer-heading {
-  @apply font-primary font-bold uppercase tracking-wider text-[#D9A329] text-center text-sm md:text-3xl xl:text-5xl 2xl:text-7xl
+  @apply font-primary font-bold uppercase tracking-wider text-center text-sm md:text-3xl xl:text-5xl 2xl:text-7xl
 }
 
 .footer-phone-number {
@@ -220,7 +221,7 @@
 }
  
 .footer-email {
-  @apply font-primary font-medium tracking-wider text-[#D9A329] text-xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap
+  @apply font-primary font-medium tracking-wider text-xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap
 }
 
 
